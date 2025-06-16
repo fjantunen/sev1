@@ -6,8 +6,6 @@
 
 By Frank Jantunen
 
----
-
 ### Copyright Page
 
 Copyright © 2025 Frank Jantunen
@@ -22,8 +20,6 @@ No part of this publication may be reproduced, stored in a retrieval system, or 
 Printed in USA 🇺🇸
 First Edition – June 2025
 
----
-
 ### Legal Disclaimer ⚖️
 
 This book is intended for informational and educational purposes only. The views expressed are those of the author and do not represent the positions of any employer, organization, or entity unless explicitly stated.
@@ -33,8 +29,6 @@ All trademarks, logos, and brand names mentioned are the property of their respe
 Mentions of specific services, platforms, or vendors—including but not limited to PagerDuty, Datadog, Honeycomb, Gremlin, Netflix, Google, PayPal, and Microsoft—are made for example and context. No payments, sponsorships, or kickbacks were received. This book promotes no specific tool or service. All references are used in a neutral, educational context.
 
 The content is provided “as-is.” Readers assume full responsibility for the use of any information presented herein. Always evaluate ideas in the context of your organization’s specific needs and risks.
-
----
 
 ### Table of Contents 📜
 
@@ -127,7 +121,6 @@ The content is provided “as-is.” Readers assume full responsibility for the 
 * [Conclusion](#conclusion)
 * [The Journey Continues: Further Learning and Resources 🚀](#the-journey-continues-further-learning-and-resources)
 
-
 **Part I: Before the Incident 🕰️**
 
 1.  What Is an Incident, Really? 🤔
@@ -156,8 +149,6 @@ Conclusion
 
 The Journey Continues: Further Learning and Resources 🚀
 
----
-
 ### Foreword
 
 When I got into tech in June 2000—slapping together fugly websites, streaming low-res videos, and trying to keep NT4 servers running—before YouTube was even a concept, I was live streaming, running end-to-end event production and becoming the SME for anything streaming or CDN. 👨‍💻
@@ -178,8 +169,6 @@ Today, incident response is a three-ring circus: engineers juggling pagers 📟,
 
 —Frank Jantunen
 
----
-
 ### Acknowledgements 🙏
 
 To my family, who never asked why I was obsessed with writing this book—just made sure I didn’t forget to eat. Thank you for the support! ❤️
@@ -195,8 +184,6 @@ To the Learning From Incidents community, and to those who’ve pushed reliabili
 Thank you to everyone who’s ever written a clear postmortem, spoken up when something felt off, or challenged process for the sake of people. You’ve made this field more humane, and this book wouldn’t exist without your example.
 
 And to anyone who reads this and offers value for value—thank you. That exchange means more than you know. ✨
-
----
 
 ## PART I: Before the Incident 🕰️
 
@@ -228,7 +215,9 @@ A typical ITIL-centric matrix illustrates this friction:
 
 #### The SRE Mindset: Engineering for Failure 💡
 
-Site Reliability Engineering (SRE) collapses the distinction between priority and severity to move faster and assumes system failures are inevitable. Key shifts:
+Site Reliability Engineering (SRE) collapses the distinction between priority and severity to move faster and assumes system failures are inevitable.
+
+Key shifts:
 
 * **Incidents are learning signals** 🎓, not just problems to fix.
 * **Teams can declare incidents based on suspicion, not proof.**
@@ -274,14 +263,10 @@ Example triggers:
 | **SRE** | Detect → Triage → Mitigate → Resolve → Review | Fast-moving, distributed systems 💨 |
 | **NIST** | Preparation → Detection & Analysis → Containment, Eradication & Recovery → Post-Incident Activity | Security-focused response 🛡️ |
 
----
-
 > 🔑 **Key Takeaway:**
 > Effective incident management requires knowing which framework to apply and when to adapt. SRE principles thrive on clarity and speed, collapsing the old severity/priority math into a single, actionable SEV level.
 >
 > 🔑 **Keep it simple:** map severity to priority directly and define levels by the response they demand.
-
----
 
 ### 2. Operational Mindset & Culture 🧠
 
@@ -357,13 +342,11 @@ Bridge-building strategies:
 * 📡 Develop weak signal sensing
 * 🧪 Support experimentation
 
----
-
 > 🔑 **Key Takeaway:**
 > Culture isn’t a slide deck or a slogan. It’s what people actually do—under pressure, in the dark, without a script.
 > If you want real resilience, you need both: systems built to absorb shocks, and teams trained to adapt.
 
----
+
 
 ### 3. Clear Criteria for Incident Declaration ✅
 
@@ -440,13 +423,8 @@ Severity: SEV-2
 Status: Active
 ~~~
 
-
----
-
 > 🔑 **Key Takeaway:**
 > Clear criteria eliminate hesitation. When anyone can declare an incident quickly and transparently, teams respond faster and learn more effectively.
-
----
 
 ### 4. Systems, Playbooks & Observability 🗺️
 
