@@ -1,2 +1,6 @@
-title: SEV1 - The Art Of Incident Command
-theme: jekyll-theme-cayman
+theme: jekyll-theme-minimal
+markdown: kramdown
+
+# Add this line
+include:
+  - assets/css/style.css
