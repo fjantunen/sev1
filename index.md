@@ -32,35 +32,8 @@ The content is provided “as-is.” Readers assume full responsibility for the 
 
 ### Table of Contents 📜
 
-* [Acknowledgements 🙏](#acknowledgements- )
-* [Foreword](#foreword)
-
-**Part I: Before the Incident 🕰️**
-
-1. [What Is an Incident, Really? 🤔](#1-what-is-an-incident-really)  
-2. [Operational Mindset & Culture 🧠](#2-operational-mindset--culture)  
-3. [Clear Criteria for Incident Declaration ✅](#3-clear-criteria-for-incident-declaration)  
-4. [Systems, Playbooks & Observability 🗺️](#4-systems-playbooks--observability)  
-5. [Alerting Without the Noise 🔕](#5-alerting-without-the-noise)  
-6. [Training, Simulation & Team Maturity 🏋️‍♀️](#6-training-simulation--team-maturity)  
-
-**Part II: During the Incident 🔥**
-
-7. [Triggers & Assembly 🚦](#7-triggers--assembly)  
-8. [Incident Command in Practice 🧑‍✈️](#8-incident-command-in-practice)  
-9. [Communication Under Pressure 🗣️](#9-communication-under-pressure)  
-10. [Managing People, Pace & Burnout 🧘](#10-managing-people-pace--burnout)  
-
-**Part III: After the Incident 📝**
-
-11. [Declaring the End & Recovery 🏁](#11-declaring-the-end--recovery)  
-12. [Postmortems That Don’t Suck ✨](#12-postmortems-that-dont-suck)  
-13. [From Lessons to Systems Change 🔄](#13-from-lessons-to-systems-change)  
-14. [Measuring What Matters 📊](#14-measuring-what-matters)  
-15. [The Future State of Incident Command 🔮](#15-the-future-state-of-incident-command)  
-
-* [Conclusion](#conclusion)
-* [The Journey Continues: Further Learning and Resources 🚀](#the-journey-continues-further-learning-and-resources)
+Acknowledgements
+Foreword
 
 **Part I: Before the Incident 🕰️**
 
@@ -90,6 +63,22 @@ Conclusion
 
 The Journey Continues: Further Learning and Resources 🚀
 
+### Acknowledgements 🙏
+
+To my family, who never asked why I was obsessed with writing this book—just made sure I didn’t forget to eat. Thank you for the support! ❤️
+
+To Eric, who’s been a great mentor and a constant source of inspiration.
+
+To everyone I’ve worked with over the years. 🤝
+
+To my employers—for helping me grow my career and helping me feed my family.
+
+To the Learning From Incidents community, and to those who’ve pushed reliability thinking beyond dashboards and into the human domain—your work paved the way for this one.
+
+Thank you to everyone who’s ever written a clear postmortem, spoken up when something felt off, or challenged process for the sake of people. You’ve made this field more humane, and this book wouldn’t exist without your example.
+
+And to anyone who reads this and offers value for value—thank you. That exchange means more than you know. ✨
+
 ### Foreword
 
 When I got into tech in June 2000—slapping together fugly websites, streaming low-res videos, and trying to keep NT4 servers running—before YouTube was even a concept, I was live streaming, running end-to-end event production and becoming the SME for anything streaming or CDN. 👨‍💻
@@ -109,22 +98,6 @@ Today, incident response is a three-ring circus: engineers juggling pagers 📟,
 🌊 The water’s rough. Are you ready to jump in?
 
 —Frank Jantunen
-
-### Acknowledgements 🙏
-
-To my family, who never asked why I was obsessed with writing this book—just made sure I didn’t forget to eat. Thank you for the support! ❤️
-
-To Eric, who’s been a great mentor and a constant source of inspiration.
-
-To everyone I’ve worked with over the years. 🤝
-
-To my employers—for helping me grow my career and helping me feed my family.
-
-To the Learning From Incidents community, and to those who’ve pushed reliability thinking beyond dashboards and into the human domain—your work paved the way for this one.
-
-Thank you to everyone who’s ever written a clear postmortem, spoken up when something felt off, or challenged process for the sake of people. You’ve made this field more humane, and this book wouldn’t exist without your example.
-
-And to anyone who reads this and offers value for value—thank you. That exchange means more than you know. ✨
 
 ## PART I: Before the Incident 🕰️
 
@@ -828,6 +801,7 @@ You can't improve what you don't measure. Metrics provide insights into the heal
 * **Mean Time To Acknowledge (MTTA):** How long from alert to first human acknowledgment? (Lower is better) ⏱️
 * **Mean Time To Mitigate (MTTM):** How long from detection to impact reduction? (Lower is better) ⏱️
 * **Mean Time To Resolve (MTTR):** How long from detection to full service restoration? (Lower is better) ⏱️
+* **Mean Time To Identify (MTTI):** How long does it take to figure out root cause? (Lower is better) ⏱️
 * **Number of Incidents:** Total incidents over time (e.g., per week, month). (Fewer is better, but watch for under-declaration) 📉
 * **Incident Frequency by Severity:** Breakdown of SEV-1s, SEV-2s, etc. 📊
 * **On-Call Burden/Pager Fatigue:** Number of alerts per on-call engineer, number of pages outside working hours. (Lower is better) 😴
