@@ -662,7 +662,6 @@ Incidents are sprints, not marathons. Sustained high-pressure work leads to burn
 The IC role is incredibly demanding. Self-care is crucial.
 
 * **Planned Handover:** For longer incidents, have clear handover protocols with a new IC taking over. This includes a full briefing. 🤝
-* **Post-Incident Debrief:** For the IC, a brief chat with a trusted colleague or mentor can help offload stress. 💬
 * **Learn to Say No:** The IC must protect the team from distractions and scope creep during an active incident. 🙅‍♂️
 
 > 🔑 **Key Takeaway:**
