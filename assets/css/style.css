@@ -9,7 +9,8 @@
   Professional CSS Theme
 
   This stylesheet provides a clean, professional, and accessible theme
-  with a focus on readability and a modern aesthetic.
+  with a focus on readability and a modern aesthetic, now enhanced
+  for a book-like markdown presentation and improved text centering.
 
   Table of Contents:
   1.  Font Imports
@@ -19,6 +20,7 @@
   5.  Buttons
   6.  Forms
   7.  Utility Classes
+  8.  Markdown-like Enhancements
 */
 
 /* 1. Font Imports */
@@ -43,15 +45,18 @@
   --text-color: #343a40;      /* Dark charcoal for main text for good contrast */
   --text-light: #6c757d;      /* Lighter gray for secondary text */
   --text-lighter: #adb5bd;    /* Even lighter gray for subtle text */
+  --text-code: #e83e8c;      /* Color for inline code */
 
   --background-color: #f8f9fa; /* Light gray for general background */
   --surface-color: #ffffff;    /* White for cards, modals, etc. */
   --border-color: #dee2e6;     /* Light gray for borders */
   --shadow-color: rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+  --code-background: #e9ecef; /* Light gray for code blocks */
 
   /* Font Families */
   --font-primary: 'Inter', sans-serif;
   --font-secondary: 'Open Sans', sans-serif;
+  --font-mono: 'SFMono-Regular', Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* Monospace for code */
 }
 
 /* 3. Global Resets & Body Styling */
@@ -63,7 +68,7 @@
 
 body {
   font-family: var(--font-primary);
-  line-height: 1.6;
+  line-height: 1.6; /* Improved line height for readability */
   color: var(--text-color);
   background-color: var(--background-color);
   -webkit-font-smoothing: antialiased; /* Smoother font rendering */
@@ -89,6 +94,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600; /* Semi-bold for headings */
   line-height: 1.2;
   margin-bottom: 0.5em;
+  margin-top: 1em; /* Add top margin for better separation */
   color: var(--text-color);
 }
 
@@ -238,6 +244,56 @@ textarea.form-control {
   margin-bottom: 1.5rem;
 }
 
+/* 8. Markdown-like Enhancements */
+blockquote {
+  border-left: 4px solid var(--primary-color);
+  padding: 1em 1.5em;
+  margin: 1.5em 0;
+  font-style: italic;
+  color: var(--text-light);
+  background-color: var(--background-color);
+  border-radius: 0.25rem;
+}
+
+ul, ol {
+  margin-bottom: 1em;
+  padding-left: 1.5em; /* Indent lists */
+}
+
+ul li, ol li {
+  margin-bottom: 0.5em;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  color: var(--text-code);
+  background-color: var(--code-background);
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+}
+
+pre {
+  background-color: var(--code-background);
+  color: var(--text-color);
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  line-height: 1.5;
+  padding: 1em;
+  margin: 1.5em 0;
+  overflow-x: auto; /* Enable horizontal scrolling for long lines */
+  border-radius: 0.375rem;
+  border: 1px solid var(--border-color);
+}
+
+pre code {
+  background-color: transparent; /* Override inline code background */
+  color: inherit; /* Inherit color from pre block */
+  padding: 0;
+  border-radius: 0;
+}
+
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   h1 { font-size: 2em; }
@@ -256,8 +312,4 @@ textarea.form-control {
     padding: 0.6em 1.2em;
     font-size: 0.9em;
   }
-}
-
-  from { opacity: 1; }
-  to { opacity: 0.75; }
 }
