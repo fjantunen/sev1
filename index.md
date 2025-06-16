@@ -214,7 +214,7 @@ This approach is service-focused, reactive, and operational by nature—an incid
 
 In modern, complex systems, the traditional ITIL model's handling of urgency and impact is a critical bottleneck. The model separates priority from severity, calculating priority based on a function of its two main inputs:
 
-$$\text{Priority} = (\text{Impact} \times \text{Urgency})$$
+Priority = Impact x Urgency
 
 A typical ITIL-centric matrix illustrates this friction:
 
