@@ -1,0 +1,70 @@
+/* Hide GitHub corner */
+.github-corner, .github-fork-ribbon {
+  display: none !important;
+}
+
+/* Chaotic burning background */
+body {
+  background: url('https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif') center center fixed;
+  background-size: cover;
+  color: #fff;
+  font-family: "Comic Sans MS", "Comic Neue", sans-serif;
+  padding: 2rem;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* Container overlay to help readability */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* Headings in red/yellow like fire */
+h1, h2, h3 {
+  color: #ffcc00;
+}
+
+/* Links */
+a {
+  color: #ff6666;
+  font-weight: bold;
+}
+
+/* Code blocks like burnt paper */
+pre, code {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffcccb;
+  padding: 0.5em;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+/* Meme-style quote blocks */
+blockquote {
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 5px solid #ff4444;
+  padding-left: 1rem;
+  color: #ffdddd;
+  font-style: italic;
+}
+
+/* Add a burning banner */
+#banner {
+  background-color: #ff3300;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  font-weight: bold;
+  font-size: 1.5em;
+  box-shadow: 0 0 15px #ff0000;
+  animation: flicker 1s infinite alternate;
+  margin-bottom: 2rem;
+}
+
+@keyframes flicker {
+  from { opacity: 1; }
+  to { opacity: 0.6; }
+}
