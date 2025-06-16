@@ -3,6 +3,10 @@
   display: none !important;
 }
 
+header, .header, .fork-me {
+  display: none !important;
+}
+
 /* Chaotic burning background */
 body {
   background: url('https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif') center center fixed;
