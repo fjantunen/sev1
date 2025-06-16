@@ -80,21 +80,33 @@ blockquote {
   font-style: italic;
 }
 
-/* Banner */
-#banner {
-  background-color: #cc0000;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  font-weight: bold;
-  font-size: 1.5em;
-  letter-spacing: 0.05em;
-  margin-bottom: 2rem;
-  box-shadow: 0 0 15px rgba(255, 51, 0, 0.8);
-  animation: flicker 1s infinite alternate;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2em 0;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes flicker {
-  from { opacity: 1; }
-  to { opacity: 0.8; }
+th, td {
+  padding: 0.75em 1em;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+thead {
+  background-color: #f7f7f7;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #999;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #eef;
+  transition: background-color 0.2s ease-in-out;
 }
