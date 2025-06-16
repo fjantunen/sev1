@@ -3,88 +3,261 @@
   display: none !important;
 }
 
-/* Base page styling */
+/*
+  assets/css/style.css
+
+  Professional CSS Theme
+
+  This stylesheet provides a clean, professional, and accessible theme
+  with a focus on readability and a modern aesthetic.
+
+  Table of Contents:
+  1.  Font Imports
+  2.  Root Variables (Colors)
+  3.  Global Resets & Body Styling
+  4.  Typography
+  5.  Buttons
+  6.  Forms
+  7.  Utility Classes
+*/
+
+/* 1. Font Imports */
+/* Using Google Fonts for professional and widely available fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+/* 2. Root Variables (Colors) */
+/* Defining a clean and professional color palette */
+:root {
+  --primary-color: #007bff; /* A standard, professional blue */
+  --primary-dark: #0056b3;  /* Darker shade for hover/active states */
+  --primary-light: #e6f2ff; /* Lighter shade for backgrounds/accents */
+
+  --secondary-color: #6c757d; /* A muted gray for secondary elements */
+  --secondary-dark: #5a6268;
+
+  --success-color: #28a745; /* Green for success messages/actions */
+  --info-color: #17a2b8;    /* Cyan for informational messages */
+  --warning-color: #ffc107; /* Yellow for warnings */
+  --danger-color: #dc3545;  /* Red for errors/critical actions */
+
+  --text-color: #343a40;      /* Dark charcoal for main text for good contrast */
+  --text-light: #6c757d;      /* Lighter gray for secondary text */
+  --text-lighter: #adb5bd;    /* Even lighter gray for subtle text */
+
+  --background-color: #f8f9fa; /* Light gray for general background */
+  --surface-color: #ffffff;    /* White for cards, modals, etc. */
+  --border-color: #dee2e6;     /* Light gray for borders */
+  --shadow-color: rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+
+  /* Font Families */
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Open Sans', sans-serif;
+}
+
+/* 3. Global Resets & Body Styling */
+*, *::before, *::after {
+  box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: #1a1a1a;
-  color: #f5f5f5;
-  font-family: 'Roboto Slab', 'Segoe UI', 'Helvetica Neue', sans-serif;
-  line-height: 1.75;
-  font-size: 18px;
-  padding: 2rem;
-  max-width: 850px;
-  margin: 0 auto;
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  -webkit-font-smoothing: antialiased; /* Smoother font rendering */
+  -moz-osx-font-smoothing: grayscale; /* Smoother font rendering */
+  padding: 20px; /* Add some default padding around the body content */
 }
 
-/* Headings: fire color gradient */
-h1, h2, h3 {
-  font-family: 'Roboto Slab', serif;
-  color: #ff4d00;
-  border-bottom: 2px solid #ff4d00;
-  padding-bottom: 0.3em;
-  margin-top: 2em;
-}
-
-h1 {
-  font-size: 2.2em;
-}
-h2 {
-  font-size: 1.7em;
-}
-h3 {
-  font-size: 1.3em;
-}
-
-/* Links: orange hover with underline */
+/* Base link styling */
 a {
-  color: #ff9933;
+  color: var(--primary-color);
   text-decoration: none;
-  font-weight: 600;
+  transition: color 0.3s ease;
 }
+
 a:hover {
+  color: var(--primary-dark);
   text-decoration: underline;
-  color: #ffcc66;
 }
 
-/* Code blocks: black with burnt orange text */
-pre, code {
-  background-color: #262626;
-  color: #ffb366;
-  padding: 0.6rem 0.8rem;
-  border-radius: 4px;
-  font-family: Menlo, Consolas, "Courier New", monospace;
-  font-size: 0.95em;
+/* 4. Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  font-weight: 600; /* Semi-bold for headings */
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+  color: var(--text-color);
 }
 
-/* Inline code */
-code {
-  padding: 0.2rem 0.4rem;
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1em; }
+
+p {
+  margin-bottom: 1em;
+  font-family: var(--font-secondary);
 }
 
-/* Blockquotes: red-orange alert stripe */
-blockquote {
-  border-left: 5px solid #ff3300;
-  background: rgba(255, 69, 0, 0.1);
-  color: #ffcccc;
-  padding: 1rem;
-  margin: 1.5rem 0;
-  font-style: italic;
+small {
+  font-size: 0.875em;
+  color: var(--text-light);
 }
 
-/* Banner at top of page */
-#banner {
-  background-color: #ff3300;
-  color: #fff;
+/* 5. Buttons */
+.btn {
+  display: inline-block;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  color: var(--surface-color);
+  background-color: var(--primary-color);
+  padding: 0.75em 1.5em;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.375rem; /* Slightly rounded corners */
+  cursor: pointer;
   text-align: center;
-  padding: 1rem;
-  font-weight: bold;
-  font-size: 1.5em;
-  box-shadow: 0 0 20px #ff0000;
-  margin-bottom: 2rem;
-  letter-spacing: 0.03em;
-  animation: flicker 0.8s infinite alternate;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  -webkit-appearance: none; /* Remove default button styles for cross-browser consistency */
+  -moz-appearance: none;
+  appearance: none;
 }
 
-@keyframes flicker {
+.btn:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.btn-secondary {
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-dark);
+  border-color: var(--secondary-dark);
+  color: var(--surface-color);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  background-color: transparent;
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  color: var(--surface-color);
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* 6. Forms */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: var(--surface-color);
+  background-clip: padding-box;
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  color: var(--text-color);
+  background-color: var(--surface-color);
+  border-color: var(--primary-color);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Focus ring */
+}
+
+.form-control::placeholder {
+  color: var(--text-lighter);
+  opacity: 1;
+}
+
+textarea.form-control {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* 7. Utility Classes */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.m-1 { margin: 0.5rem; }
+.m-2 { margin: 1rem; }
+.m-3 { margin: 1.5rem; }
+.my-1 { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+.my-2 { margin-top: 1rem; margin-bottom: 1rem; }
+.my-3 { margin-top: 1.5rem; margin-bottom: 1.5rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+.p-1 { padding: 0.5rem; }
+.p-2 { padding: 1rem; }
+.p-3 { padding: 1.5rem; }
+.py-1 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-2 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-3 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.card {
+  background-color: var(--surface-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 10px var(--shadow-color);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h1 { font-size: 2em; }
+  h2 { font-size: 1.75em; }
+  h3 { font-size: 1.5em; }
+  body {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.75em; }
+  h2 { font-size: 1.5em; }
+  h3 { font-size: 1.25em; }
+  .btn {
+    padding: 0.6em 1.2em;
+    font-size: 0.9em;
+  }
+}
+
   from { opacity: 1; }
   to { opacity: 0.75; }
 }
