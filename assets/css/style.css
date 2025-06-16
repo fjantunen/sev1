@@ -107,6 +107,6 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr:hover {
-  background-color: #eef;
+  background-color: #ffe5b4; /* light orange */
   transition: background-color 0.2s ease-in-out;
 }
