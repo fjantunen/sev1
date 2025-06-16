@@ -1,6 +1,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 
+<pre style="color:#ff6600; font-family: monospace; font-size: 0.9em; background: #1a1a1a;">
+              (╯°□°)╯︵ ┻━┻
+      THIS IS FINE. EVERYTHING IS ON FIRE.
+       _______________________________________
+      |                                       |
+      |   ████🔥 INCIDENT SEV1 🔥████         |
+      |_______________________________________|
+</pre>
+
 # SEV1: The Art of Incident Command
 ## A Modern SRE-Aligned Approach to Incident Management
 
