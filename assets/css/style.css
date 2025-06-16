@@ -1,5 +1,5 @@
-/* Hide GitHub header */
-.github-corner, header, .header, .fork-me {
+/* Hide GitHub header + footer */
+.github-corner, header, footer, .header, .footer, .fork-me {
   display: none !important;
 }
 
