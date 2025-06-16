@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="assets/css/sev1.css">
 
-<div id="banner"
+<div id="banner">
 
 # SEV1: The Art of Incident Command
 ## A Modern SRE-Aligned Approach to Incident Management
