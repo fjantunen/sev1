@@ -625,7 +625,7 @@ During an incident, communication is paramount. Misinformation or lack of inform
 
 * **Chat Ops Integration:** Tools that allow declaring incidents, assigning roles, and sending updates directly from chat. 🤖
 * **Video Conferencing:** For deep dives and real-time collaboration among the technical team. 🧑‍💻
-* **Incident Management Platforms:** PagerDuty, Opsgenie, VictorOps – centralize alerting, on-call schedules, and incident communication workflows.
+* **Incident Management Platforms:** PagerDuty, FireHydrant, Rootly – centralize alerting, on-call schedules, and incident communication workflows.
 
 > 🔑 **Key Takeaway:**
 > Effective incident communication is structured, timely, and audience-aware. It builds trust, reduces noise, and ensures everyone stays aligned towards resolution.
