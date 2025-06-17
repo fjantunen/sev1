@@ -12,7 +12,7 @@ All rights reserved.
 
 This work is distributed under a value-for-value model. It may be freely read, shared, and discussed for personal, non-commercial use. If you found it valuable, consider supporting the project or sharing it. 🙏
 
-For commercial use—including redistribution, employee training, or internal documentation—please contact the author directly at frank.jantunen@gmail.com.
+For commercial use—including redistribution, employee training, or internal documentation—please contact the author directly at frank@sev1.org.
 
 No part of this publication may be reproduced, stored in a retrieval system, or transmitted by any means—electronic, mechanical, photocopying, recording, or otherwise—for commercial use without prior written permission from the author.
 
