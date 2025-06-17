@@ -10,7 +10,15 @@ By Frank Jantunen
 Copyright © 2025 Frank Jantunen
 All rights reserved.
 
-This work is distributed under a value-for-value model. It may be freely read, shared, and discussed for personal, non-commercial use. If you found it valuable, consider supporting the project or sharing it. 🙏
+This work is distributed under a value-for-value model. It may be freely read, shared, and discussed for personal, non-commercial use. If you found it valuable, consider supporting the project, offering feedback or sharing it. 🙏
+
+No paywall. No ads. Just value-for-value.
+
+Support the project:
+
+⚡ Bitcoin: bc1qxl8uy3acrhlhgvn7653twmdmhr97j0xjxk2cak
+
+💸 PayPal: paypal.me/frankjantunen
 
 For commercial use—including redistribution, employee training, or internal documentation—please contact the author directly at frank@sev1.org.
 
