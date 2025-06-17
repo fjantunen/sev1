@@ -336,10 +336,9 @@ Unless security-sensitive, post in a public `#incidents` channel with an auto-ge
 **Example:**
 ~~~
 New Incident Started - INC-2341
-Summary: High error rate on checkout API
-Channel: #incident-inc-2341
+Summary: SEV2 - Checkout - API - High error rate on checkout API
+Channel: #inc-2341
 Severity: SEV-2
-Status: Active
 ~~~
 
 > 🔑 **Key Takeaway:**
