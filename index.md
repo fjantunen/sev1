@@ -18,7 +18,7 @@ Support the project:
 
 ⚡ Bitcoin: bc1qxl8uy3acrhlhgvn7653twmdmhr97j0xjxk2cak
 
-💸 PayPal: paypal.me/frankjantunen
+💸 PayPal: https://paypal.me/frankjantunen
 
 For commercial use—including redistribution, employee training, or internal documentation—please contact the author directly at frank@sev1.org.
 
