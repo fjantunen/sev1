@@ -70,8 +70,6 @@ To Eric, who’s been a great mentor and a constant source of inspiration.
 
 To everyone I’ve worked with over the years. 🤝
 
-To my employers—for helping me grow my career and helping me feed my family.
-
 To the Learning From Incidents community, and to those who’ve pushed reliability thinking beyond dashboards and into the human domain—your work paved the way for this one.
 
 Thank you to everyone who’s ever written a clear postmortem, spoken up when something felt off, or challenged process for the sake of people. You’ve made this field more humane, and this book wouldn’t exist without your example.
@@ -119,7 +117,7 @@ Priority = Impact x Urgency
 A typical ITIL-centric matrix illustrates this friction:
 
 | Impact ↓ / Urgency → | Low (Can be planned) | Medium (Disrupts some users) | High (Widespread disruption) | Critical (Business viability risk) |
-| :------------------- | :------------------- | :--------------------------- | :--------------------------- | :--------------------------------- |
+| :---------------- | :---------------- | :------------------------ | :------------------------ | :------------------------------ |
 | **High (Major outage)** | P2 | P1 | P1 | P1 |
 | **Medium (Feature fail)** | P3 | P2 | P1 | |
 | **Low (Minor issue)** | P4 | P3 | P2 | |
