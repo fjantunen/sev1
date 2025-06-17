@@ -603,7 +603,7 @@ Then, the loop repeats, constantly adapting to new information. This iterative p
 
 ### 9. Communication Under Pressure 🗣️
 
-During an incident, communication is paramount. Misinformation or lack of information fuels panic and slows resolution.
+During an incident, clear communication is paramount. Misinformation or lack of information fuels panic and slows resolution.
 
 #### Internal Communication: Keeping the Team Aligned
 
@@ -632,7 +632,7 @@ During an incident, communication is paramount. Misinformation or lack of inform
 
 * **Chat Ops Integration:** Tools that allow declaring incidents, assigning roles, and sending updates directly from chat. 🤖
 * **Video Conferencing:** For deep dives and real-time collaboration among the technical team. 🧑‍💻
-* **Incident Management Platforms:** PagerDuty, FireHydrant, Rootly – centralize alerting, on-call schedules, and incident communication workflows.
+* **Incident Management Platforms:** Incident.io, Rootly, PagerDuty, FireHydrant – centralize alerting, on-call schedules, and incident communication workflows.
 
 > 🔑 **Key Takeaway:**
 > Effective incident communication is structured, timely, and audience-aware. It builds trust, reduces noise, and ensures everyone stays aligned towards resolution.
@@ -652,7 +652,7 @@ Incidents are sprints, not marathons. Sustained high-pressure work leads to burn
 * **Focus on the Signal:** Filter out irrelevant information. IC's job is to create a clear signal-to-noise ratio. 🔇
 * **Delegate Ruthlessly:** IC assigns specific, clear tasks, ask folks to report back in channel async. Avoid vague "look into this." ✅
 * **Use Checklists/Runbooks:** Reduce cognitive load by externalizing routine steps. 📋
-* **Limit Concurrent Tasks:** Encourage responders to focus on one problem at a time. 🎯
+* **Limit Concurrent Tasks:** Encourage responders to focus on one problem at a time. Use prioritized checklists for multiple tasks, as needed. 🎯
 
 #### Psychological Safety During the Incident
 
@@ -752,11 +752,11 @@ A robust post-mortem document typically includes:
 * **Action-Oriented:** Ensure clear, assignable action items are generated.
 
 > 🔑 **Key Takeaway:**
-> A blameless post-mortem is a gift to your organization. It transforms errors into opportunities for systemic improvement, fostering a culture of continuous learning and resilience.
+> A blameless postmortem is a gift to your organization. It transforms errors into opportunities for systemic improvement, fostering a culture of continuous learning and resilience.
 
 ### 13. From Lessons to Systems Change 🔄
 
-A post-mortem without action is just a history lesson. The real value comes from turning insights into tangible improvements.
+A retrospective without action is just a history lesson. The real value comes from turning insights into tangible improvements.
 
 #### The Action Item Lifecycle
 
