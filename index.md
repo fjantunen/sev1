@@ -568,15 +568,15 @@ The IC is like the conductor of an orchestra—they don't play every instrument,
 Effective incident response relies on clear roles:
 
 * **Incident Commander (IC):** The strategic lead. 🧑‍✈️
-* **Operations Lead (Ops Lead):** Directs technical investigation and mitigation. 🛠️
+* **Operations Lead (Optional):** Directs technical investigation and mitigation. 🛠️
 * **Communications Lead (Comms Lead):** Manages internal and external messaging. 🗣️
-* **Scribe/Logger:** Documents all actions and decisions in real-time. ✍️
+* **Scribe:** Documents all actions and decisions in real-time. ✍️
 * **Subject Matter Experts (SMEs):** Engineers from affected teams who diagnose and fix. 💻
 * **Support Lead (Optional):** Manages incoming customer support queries. 📞
 * **Executive Sponsor (Optional):** Provides high-level support, approves major actions. 👑
 
 > ❗ **Important:**
-> In smaller organizations, one person may wear multiple hats initially, but the *mindset* of these distinct roles is crucial.
+> In many organizations, one person may wear multiple hats initially, but the *mindset* of these distinct roles is crucial.
 
 #### The Incident Lifecycle: From Active to Resolved
 
@@ -609,7 +609,7 @@ During an incident, communication is paramount. Misinformation or lack of inform
 #### Internal Communication: Keeping the Team Aligned
 
 * **Dedicated Incident Channel:** A central place (e.g., Slack, Teams) for all incident-related communication. 💬
-* **Regular Updates:** IC or Comms Lead provides concise updates every 5-15 minutes (or as agreed).
+* **Regular Updates:** IC or Comms Lead provides concise updates every 30 minutes (or as agreed).
 * **Structured Updates (e.g., SBAR):**
     * **S**ituation: What's happening?
     * **B**ackground: When did it start? What's known?
@@ -624,7 +624,7 @@ During an incident, communication is paramount. Misinformation or lack of inform
     * **Internal Stakeholders:** Product, Sales, Marketing, Leadership. Need impact, estimated time to restore (ETR), and business implications. 📈
     * **Customers:** Via status page, email, social media. Need clear, honest, and timely updates. Transparent but not overly technical. 🌐
 * **Status Page:** Your single source of truth for external updates. Should be updated frequently.
-* **Templates:** Have pre-written communication templates for different severity levels. 📋
+* **Templates:** Have pre-approved communication templates for different sceanrios. 📋
 
 > 🚨 **Crisis Communication Tip:**
 > When communicating externally, always err on the side of transparency. Acknowledge impact, provide updates frequently, and communicate when you *don't* have an update (e.g., "Still investigating, next update in 15 minutes").
@@ -644,15 +644,14 @@ Incidents are sprints, not marathons. Sustained high-pressure work leads to burn
 
 #### Recognizing and Mitigating Fatigue
 
-* **Mandatory Breaks:** IC should enforce short breaks every 1-2 hours. Walk away, grab water, stretch. 🚶‍♀️
+* **Mandatory Breaks:** IC should enforce short breaks every few hours. Go for a walk, grab water, stretch. 🚶‍♀️
 * **Rotation:** Ensure sufficient on-call rotation. No single person should be on-call for excessively long periods. 🔄
 * **Observing Body Language/Tone:** IC should actively watch for signs of stress, frustration, or exhaustion. 😠➡️😌
-* **Snacks & Hydration:** Simple but effective. Keep responders fueled. 🍎💧
 
 #### Avoiding Cognitive Overload
 
 * **Focus on the Signal:** Filter out irrelevant information. IC's job is to create a clear signal-to-noise ratio. 🔇
-* **Delegate Ruthlessly:** IC assigns specific, clear tasks. Avoid vague "look into this." ✅
+* **Delegate Ruthlessly:** IC assigns specific, clear tasks, ask folks to report back in channel async. Avoid vague "look into this." ✅
 * **Use Checklists/Runbooks:** Reduce cognitive load by externalizing routine steps. 📋
 * **Limit Concurrent Tasks:** Encourage responders to focus on one problem at a time. 🎯
 
