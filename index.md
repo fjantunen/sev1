@@ -327,9 +327,9 @@ Unless security-sensitive, post in a public `#incidents` channel with an auto-ge
 
 **Example:**
 ~~~
-INC-2341
+Ticket# INC-2341
 SEV2 - Checkout - API - High error rate on checkout API
-Channel: #inc-2341
+Slack Channel: #inc-2341
 ~~~
 
 > 🔑 **Key Takeaway:**
