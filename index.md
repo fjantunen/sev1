@@ -122,14 +122,6 @@ In modern, complex systems, the traditional ITIL model's handling of urgency and
 
 Priority = Impact x Urgency
 
-A typical ITIL-centric matrix illustrates this friction:
-
-| Impact ↓ / Urgency → | Low | Medium | High | Critical |
-| :----- | :----- | :----- | :----- | :------ |
-| **High** | P2 | P1 | P1 | P1 |
-| **Medium** | P3 | P2 | P1 | |
-| **Low** | P4 | P3 | P2 | |
-
 > ⏳ **Debating whether an incident is a P2 or P3 wastes time not spent mitigating escalating customer impact.**
 
 #### The SRE Mindset: Engineering for Failure 💡
