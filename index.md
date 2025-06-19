@@ -125,7 +125,7 @@ Priority = Impact x Urgency
 A typical ITIL-centric matrix illustrates this friction:
 
 | Impact ↓ / Urgency → | Low (Can be planned) | Medium (Disrupts some users) | High (Widespread disruption) | Critical (Business viability risk) |
-| :---------------- | :---------------- | :------------------------ | :------------------------ | :------------------------------ |
+| :----- | :----- | :----- | :----- | :------ |
 | **High (Major outage)** | P2 | P1 | P1 | P1 |
 | **Medium (Feature fail)** | P3 | P2 | P1 | |
 | **Low (Minor issue)** | P4 | P3 | P2 | |
