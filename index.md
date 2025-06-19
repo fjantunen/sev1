@@ -124,11 +124,11 @@ Priority = Impact x Urgency
 
 A typical ITIL-centric matrix illustrates this friction:
 
-| Impact ↓ / Urgency → | Low (Can be planned) | Medium (Disrupts some users) | High (Widespread disruption) | Critical (Business viability risk) |
+| Impact ↓ / Urgency → | Low | Medium | High | Critical |
 | :----- | :----- | :----- | :----- | :------ |
-| **High (Major outage)** | P2 | P1 | P1 | P1 |
-| **Medium (Feature fail)** | P3 | P2 | P1 | |
-| **Low (Minor issue)** | P4 | P3 | P2 | |
+| **High** | P2 | P1 | P1 | P1 |
+| **Medium** | P3 | P2 | P1 | |
+| **Low** | P4 | P3 | P2 | |
 
 > ⏳ **Debating whether an incident is a P2 or P3 wastes time not spent mitigating escalating customer impact.**
 
@@ -164,7 +164,7 @@ Example triggers:
 #### Example Modern Severity Matrix 🚀
 
 | Severity | Impact | Typical Response Time | Examples & Notes |
-| :------- | :----- | :-------------------- | :--------------- |
+| :------- | :----- | :----- | :------ |
 | **SEV-0 (optional)** | Severe platform failure, business risk | Immediate | Catastrophic event, exec-level coordination, unknown recovery path |
 | **SEV-1** | Major service degradation or outage | < 3 min | Core features down, large-scale impact, "all-hands" response |
 | **SEV-2** | Moderate service impact | < 5 min | Significant performance issues, workaround may exist, multiple services affected |
