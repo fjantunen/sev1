@@ -43,21 +43,21 @@ The content is provided “as-is.” Readers assume full responsibility for the 
 
 [Foreword](#foreword)
 
-**Part I: Before the Incident 🕰️**
+[**Part I: Before the Incident 🕰️**](#part-i-before-the-incident-%EF%B8%8F)
 
 [1.  What Is an Incident, Really? 🤔](#1-what-is-an-incident-really-)  
 [2.  Operational Mindset & Culture 🧠](2-#operational-mindset-culture-)  
-[3.  Clear Criteria for Incident Declaration ✅](3-#clear-criteria-for-incident-declaration-)  
-[4.  Systems, Playbooks & Observability 🗺️](4-#systems-playbooks-observability-)  
+[3.  Clear Criteria for Incident Declaration ✅](#3-clear-criteria-for-incident-declaration-)  
+[4.  Systems, Playbooks & Observability 🗺️](#4-systems-playbooks--observability-%EF%B8%8F)  
 [5.  Alerting Without the Noise 🔕](#5-alerting-without-the-noise-)  
-[6.  Training, Simulation & Team Maturity 🏋️‍♀️](#6-training-simulation-team-maturity-)
+[6.  Training, Simulation & Team Maturity 🏋️‍♀️](#6-training-simulation--team-maturity-%EF%B8%8F%EF%B8%8F)
 
-**Part II: During the Incident 🔥**
+[**Part II: During the Incident 🔥**](#part-ii-during-the-incident-)
 
-[7.  Triggers & Assembly 🚦](#7-triggers-assembly-)  
-[8.  Incident Command in Practice 🧑‍✈️](#8-incident-command-in-practice-)  
-[9.  Communication Under Pressure 🗣️](#9-communication-under-pressure-)  
-[10. Managing People, Pace & Burnout 🧘](#10-managing-people-pace-burnout-)
+[7.  Triggers & Assembly 🚦](#7-triggers--assembly-)  
+[8.  Incident Command in Practice 🧑‍✈️](#8-incident-command-in-practice-%EF%B8%8F)  
+[9.  Communication Under Pressure 🗣️](#9-communication-under-pressure-%EF%B8%8F)  
+[10. Managing People, Pace & Burnout 🧘](#10-managing-people-pace--burnout-)
 
 **Part III: After the Incident 📝**
 
@@ -328,7 +328,7 @@ Unless security-sensitive, post in a public `#incidents` channel with an auto-ge
 
 **Example:**
 ~~~
-Ticket# INC-2341
+Jira# INC-2341
 SEV2 - Checkout - API - High error rate on checkout API
 Slack Channel: #inc-2341
 ~~~
