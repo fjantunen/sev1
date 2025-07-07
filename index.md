@@ -39,9 +39,9 @@ The content is provided “as-is.” Readers assume full responsibility for the 
 
 ### Table of Contents 📜
 
-[Acknowledgements](https://sev1.org/#acknowledgements-)
+[Acknowledgements](#acknowledgements-)
 
-Foreword
+[Foreword](#foreword)
 
 **Part I: Before the Incident 🕰️**
 
