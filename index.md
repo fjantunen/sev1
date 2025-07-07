@@ -45,27 +45,27 @@ The content is provided “as-is.” Readers assume full responsibility for the 
 
 **Part I: Before the Incident 🕰️**
 
-[1.  What Is an Incident, Really? 🤔](#what-is-an-incident-really-)  
-[2.  Operational Mindset & Culture 🧠](#operational-mindset-culture-)  
-[3.  Clear Criteria for Incident Declaration ✅](#clear-criteria-for-incident-declaration-)  
-[4.  Systems, Playbooks & Observability 🗺️](#systems-playbooks-observability-)  
-[5.  Alerting Without the Noise 🔕](#alerting-without-the-noise-)  
-[6.  Training, Simulation & Team Maturity 🏋️‍♀️](#training-simulation-team-maturity-)
+[1.  What Is an Incident, Really? 🤔](#1-what-is-an-incident-really-)  
+[2.  Operational Mindset & Culture 🧠](2-#operational-mindset-culture-)  
+[3.  Clear Criteria for Incident Declaration ✅](3-#clear-criteria-for-incident-declaration-)  
+[4.  Systems, Playbooks & Observability 🗺️](4-#systems-playbooks-observability-)  
+[5.  Alerting Without the Noise 🔕](#5-alerting-without-the-noise-)  
+[6.  Training, Simulation & Team Maturity 🏋️‍♀️](#6-training-simulation-team-maturity-)
 
 **Part II: During the Incident 🔥**
 
-[7.  Triggers & Assembly 🚦](#triggers-assembly-)  
-[8.  Incident Command in Practice 🧑‍✈️](#incident-command-in-practice-)  
-[9.  Communication Under Pressure 🗣️](#communication-under-pressure-)  
-[10. Managing People, Pace & Burnout 🧘](#managing-people-pace-burnout-)
+[7.  Triggers & Assembly 🚦](#7-triggers-assembly-)  
+[8.  Incident Command in Practice 🧑‍✈️](#8-incident-command-in-practice-)  
+[9.  Communication Under Pressure 🗣️](#9-communication-under-pressure-)  
+[10. Managing People, Pace & Burnout 🧘](#10-managing-people-pace-burnout-)
 
 **Part III: After the Incident 📝**
 
-[11. Declaring the End & Recovery 🏁](#declaring-the-end-recovery-)  
-[12. Postmortems That Don’t Suck ✨](#postmortems-that-dont-suck-)  
-[13. From Lessons to Systems Change 🔄](#from-lessons-to-systems-change-)  
-[14. Measuring What Matters 📊](#measuring-what-matters-)  
-[15. The Future State of Incident Command 🔮](#the-future-state-of-incident-command-)
+[11. Declaring the End & Recovery 🏁](#11-declaring-the-end-recovery-)  
+[12. Postmortems That Don’t Suck ✨](#12-postmortems-that-dont-suck-)  
+[13. From Lessons to Systems Change 🔄](#13-from-lessons-to-systems-change-)  
+[14. Measuring What Matters 📊](#14-measuring-what-matters-)  
+[15. The Future State of Incident Command 🔮](#15-the-future-state-of-incident-command-)
 
 [Conclusion](#conclusion)
 
