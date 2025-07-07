@@ -61,7 +61,7 @@ The content is provided “as-is.” Readers assume full responsibility for the 
 
 **Part III: After the Incident 📝**
 
-[11. Declaring the End & Recovery 🏁](#11-declaring-the-end-recovery-)  
+[11. Declaring the End & Recovery 🏁](#11-declaring-the-end--recovery-)  
 [12. Postmortems That Don’t Suck ✨](#12-postmortems-that-dont-suck-)  
 [13. From Lessons to Systems Change 🔄](#13-from-lessons-to-systems-change-)  
 [14. Measuring What Matters 📊](#14-measuring-what-matters-)  
