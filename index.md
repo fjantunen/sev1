@@ -1,7 +1,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 # SEV1 - The Art of Incident Command
-<img src="assets/book_cover.png" alt="SEV1: The Art of Incident Command" width="400">
+<img src="assets/book_cover.png" alt="SEV1: The Art of Incident Command" width="500">
 ## A Modern SRE-Aligned Approach to Incident Management
 By Frank Jantunen
 
@@ -45,27 +45,27 @@ The content is provided “as-is.” Readers assume full responsibility for the 
 
 **Part I: Before the Incident 🕰️**
 
-[1.  What Is an Incident, Really? 🤔](#what-is-an-incident-really)  
-[2.  Operational Mindset & Culture 🧠](#operational-mindset-culture)  
-[3.  Clear Criteria for Incident Declaration ✅](#clear-criteria-for-incident-declaration)  
-[4.  Systems, Playbooks & Observability 🗺️](#systems-playbooks-observability)  
-[5.  Alerting Without the Noise 🔕](#alerting-without-the-noise)  
-[6.  Training, Simulation & Team Maturity 🏋️‍♀️](#training-simulation-team-maturity)
+[1.  What Is an Incident, Really? 🤔](#what-is-an-incident-really-)  
+[2.  Operational Mindset & Culture 🧠](#operational-mindset-culture-)  
+[3.  Clear Criteria for Incident Declaration ✅](#clear-criteria-for-incident-declaration-)  
+[4.  Systems, Playbooks & Observability 🗺️](#systems-playbooks-observability-)  
+[5.  Alerting Without the Noise 🔕](#alerting-without-the-noise-)  
+[6.  Training, Simulation & Team Maturity 🏋️‍♀️](#training-simulation-team-maturity-)
 
 **Part II: During the Incident 🔥**
 
-[7.  Triggers & Assembly 🚦](#triggers-assembly)  
-[8.  Incident Command in Practice 🧑‍✈️](#incident-command-in-practice)  
-[9.  Communication Under Pressure 🗣️](#communication-under-pressure)  
-[10. Managing People, Pace & Burnout 🧘](#managing-people-pace-burnout)
+[7.  Triggers & Assembly 🚦](#triggers-assembly-)  
+[8.  Incident Command in Practice 🧑‍✈️](#incident-command-in-practice-)  
+[9.  Communication Under Pressure 🗣️](#communication-under-pressure-)  
+[10. Managing People, Pace & Burnout 🧘](#managing-people-pace-burnout-)
 
 **Part III: After the Incident 📝**
 
-[11. Declaring the End & Recovery 🏁](#declaring-the-end-recovery)  
-[12. Postmortems That Don’t Suck ✨](#postmortems-that-dont-suck)  
-[13. From Lessons to Systems Change 🔄](#from-lessons-to-systems-change)  
-[14. Measuring What Matters 📊](#measuring-what-matters)  
-[15. The Future State of Incident Command 🔮](#the-future-state-of-incident-command)
+[11. Declaring the End & Recovery 🏁](#declaring-the-end-recovery-)  
+[12. Postmortems That Don’t Suck ✨](#postmortems-that-dont-suck-)  
+[13. From Lessons to Systems Change 🔄](#from-lessons-to-systems-change-)  
+[14. Measuring What Matters 📊](#measuring-what-matters-)  
+[15. The Future State of Incident Command 🔮](#the-future-state-of-incident-command-)
 
 [Conclusion](#conclusion)
 
