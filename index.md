@@ -69,7 +69,7 @@ The content is provided “as-is.” Readers assume full responsibility for the 
 
 [Conclusion](#conclusion)
 
-[The Journey Continues: Further Learning and Resources 🚀](#the-journey-continues-further-learning-and-resources)
+[The Journey Continues: Further Learning and Resources 🚀](#the-journey-continues-further-learning-and-resources-)
 
 ### Acknowledgements 🙏
 
