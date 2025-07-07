@@ -46,7 +46,7 @@ The content is provided “as-is.” Readers assume full responsibility for the 
 [**Part I: Before the Incident 🕰️**](#part-i-before-the-incident-%EF%B8%8F)
 
 [1.  What Is an Incident, Really? 🤔](#1-what-is-an-incident-really-)  
-[2.  Operational Mindset & Culture 🧠](2-#operational-mindset-culture-)  
+[2.  Operational Mindset & Culture 🧠](#2-operational-mindset--culture-)  
 [3.  Clear Criteria for Incident Declaration ✅](#3-clear-criteria-for-incident-declaration-)  
 [4.  Systems, Playbooks & Observability 🗺️](#4-systems-playbooks--observability-%EF%B8%8F)  
 [5.  Alerting Without the Noise 🔕](#5-alerting-without-the-noise-)  
