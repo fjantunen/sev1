@@ -59,7 +59,7 @@ The content is provided “as-is.” Readers assume full responsibility for the 
 [9.  Communication Under Pressure 🗣️](#9-communication-under-pressure-%EF%B8%8F)  
 [10. Managing People, Pace & Burnout 🧘](#10-managing-people-pace--burnout-)
 
-**Part III: After the Incident 📝**
+[**Part III: After the Incident 📝](**#part-iii-after-the-incident-)
 
 [11. Declaring the End & Recovery 🏁](#11-declaring-the-end--recovery-)  
 [12. Postmortems That Don’t Suck ✨](#12-postmortems-that-dont-suck-)  
