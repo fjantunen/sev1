@@ -40,6 +40,7 @@ The content is provided “as-is.” Readers assume full responsibility for the 
 ### Table of Contents 📜
 
 Acknowledgements
+
 Foreword
 
 **Part I: Before the Incident 🕰️**
