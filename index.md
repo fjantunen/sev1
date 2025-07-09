@@ -5,6 +5,18 @@
 ## A Modern SRE-Aligned Approach to Incident Management
 By Frank Jantunen
 
+### Why This Matters 🤝
+
+Most books about incident response are locked behind paywalls or written like policy manuals. That's not this.
+
+This book is free to read, remix, and share—because the lessons in here weren't paid for in dollars, but in downtime, lost sleep, and hard-won clarity. We've all inherited systems we didn't build and cultures we didn't choose. But we still show up. We still respond.
+
+So this book shows up for you.
+
+It's released under a value-for-value model. That means: if it helps you or your team, send value back—money, feedback, signal boost. Or just pass it to someone else who needs it.
+
+No gatekeepers. No DRM. Just trust.
+
 ### Copyright Page
 
 Copyright © 2025 Frank Jantunen
@@ -1182,3 +1194,13 @@ The next time an alert fires, you'll be better equipped. Not just with tools, bu
 * **Online Courses & Workshops:** Many platforms offer incident management training.
 
 Keep learning. Keep practicing. Keep building resilient systems and, more importantly, resilient people. Your users—and your on-call teams—will thank you. 🙏
+
+### One Last Thing 💬
+
+If this book helped you—if it made you think, saved you time, or gave you language for what you've lived—consider helping someone else.
+
+That might mean sending feedback. Sharing it with a teammate. Or supporting the project so it stays free for the next person who needs it.
+
+This is value-for-value. No gatekeepers. Just trust.
+
+Thanks for reading. Stay resilient. 🙏
