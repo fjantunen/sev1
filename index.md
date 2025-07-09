@@ -283,7 +283,7 @@ If you ask five teams what counts as an incident, you'll likely get ten differen
 | **Severity** | Not formal. Often muddled with “impact.” | Clear measure of technical impact (e.g. downtime). |
 | **Priority** | Blend of impact and urgency for ticket SLAs | Rarely used. Urgency implied by severity. |
 
-#### In Practice: Where It Breaks 💥
+#### Common Failure Modes 💥
 
 **Scenario:** A production database flips into read-only mode.
 
