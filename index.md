@@ -824,73 +824,126 @@ The OODA Loop (Observe, Orient, Decide, Act) is a powerful model for rapid decis
 
 Then, the loop repeats, constantly adapting to new information. This iterative process is vital in chaotic environments.
 
-#### Seek Clarity Early 🧭
+### 🧭 Seek Clarity Early
 
-Incidents start in a fog. Dashboards light up. Alerts fire. Slack fills with noise. It's easy to confuse motion with progress. But flailing fast is still flailing. The Incident Commander's first job isn't to fix—it's to make sense.
+Incidents begin in a **fog**.  
+📊 Dashboards light up.  
+🚨 Alerts fire.  
+💬 Slack explodes.  
 
-Clarity is the compass. Not certainty. Not root cause. Just a grounded view of what's happening, what isn't, and what needs attention.
+It's easy to confuse **motion** with **progress**.  
+But **flailing fast is still flailing**.  
+The IC's first job isn't to fix—it's to **make sense**.
 
-Start with the basics:
-What do we actually know  
-What's a guess vs a fact  
-What's the impact  
-Is anything improving  
+### 🧭 Clarity Is the Compass  
+Not **certainty**. Not **root cause**.  
+Just a grounded view of:
+- ✅ What's *actually* happening  
+- 🚫 What *isn't*  
+- 🧩 What needs attention
 
-Say it out loud. Ask others to explain their thinking. If someone says, “It's the database,” ask why. Ask what would prove that wrong. Not to challenge—just to stabilize the narrative.
+### 🔍 Start With the Basics
+- ❓ What do we **know**  
+- 🤔 What's a **guess vs a fact**  
+- 💥 What's the **impact**  
+- 📈 Is *anything* improving  
 
-Use structure. A shared doc. A pinned update. A list of knowns, unknowns, blockers. These small anchors reduce thrash and keep the room moving together.
+🗣️ Say it out loud.  
+👂 Ask others to explain their thinking.  
+If someone says, *“It's the database,”*—ask:
+- Why?  
+- What would prove that wrong?
 
-If you don't create shared clarity, people will invent their own. That's when duplicate work creeps in. Updates conflict. Progress stalls.
+Not to challenge—just to **stabilize the narrative**.
 
-Epistemology reminds us: every view is partial. Dashboards are keyholes. Alerts are shadows. Metrics simplify reality. The hard part isn't knowing what's broken—it's knowing what you can't see.
+### 🧱 Use Structure
+📝 Shared doc  
+📌 Pinned update  
+📋 List of *knowns, unknowns, blockers*  
 
-That's why great responders practice epistemic humility. They ask:  
-What might I be missing  
-What assumptions are baked into this signal  
-What else could explain this  
-What would prove me wrong  
+These small anchors ⛓️ reduce thrash and help the team move **together**.
 
-They treat every belief as a draft. Confidence as temporary. Clarity as something you build and re-check, not something you declare once and move on.
+Without shared clarity:
+- ❌ Duplicate work creeps in  
+- ⚔️ Updates conflict  
+- 🐌 Progress stalls
 
-> 🔑 **Key Takeaway:**
-> Strong incident command isn't about individual heroics; it's about structured leadership, clear roles, and rapid, iterative decision-making to tame the chaos. In the fog of an incident, clarity beats certainty. But clarity without humility turns into overconfidence. Question everything—especially your own assumptions.
+### 🧠 Practice Epistemic Humility
+
+Remember:
+- 🔍 Dashboards are **keyholes**  
+- 🫥 Alerts are **shadows**  
+- 📉 Metrics simplify reality  
+
+The hardest part isn't knowing what's broken—it's knowing **what you can't see**.
+
+Great responders ask:
+- 🤷 What might I be missing?  
+- 🧠 What assumptions are baked in?  
+- 🔄 What else could explain this?  
+- ❌ What would prove me wrong?
+
+They treat:
+- 📝 Beliefs as **drafts**  
+- 🎯 Confidence as **temporary**  
+- 🔄 Clarity as something you **build and re-check**
+
+> 🔑 **Key Takeaway:**  
+> Strong incident command isn't about heroics—it's about **structure**, **clear roles**, and **iterative clarity**.  
+> In the fog, **clarity > certainty**.  
+> But clarity without **humility** becomes overconfidence.  
+> 🧠 **Question everything—especially yourself.**
 
 ### 9. Communication Under Pressure 🗣️
 
 During an incident, clear communication is paramount. Misinformation or lack of information fuels panic and slows resolution.
 
----
-
-#### Internal Communication: Keeping the Team Aligned
+### Internal Communication: Keeping the Team Aligned
 
 * **Dedicated Incident Channel:** A central place (e.g., Slack, Teams) for all incident-related communication. 💬
 * **Regular Updates:** IC or Comms Lead provides concise updates every 30 minutes (or as agreed).
 * **Structured Updates (e.g., CAN):**
-  - **C**ondition: What's happening right now? What's known?
-  - **A**ction: What have we done or are doing next?
-  - **N**eed: What do we need? Help, approvals, decisions?
 
-**Example:**
-C: Checkout API error rate 42%, spike began at 10:14 UTC
-A: Rolled back 10:00 deploy, validating rollback effect
-N: Need DB SME to confirm read replica lag in #checkout-db
+### 🧭 The CAN Format: A Lightweight Comms Standard
+
+**C: Condition**  
+What's happening right now?  
+What systems or services are impacted?  
+When did it start?
+
+**A: Action**  
+What's been done?  
+What's underway or queued?  
+What mitigation steps or playbooks have been attempted?
+
+**N: Need**  
+What do we need?  
+Who should act, investigate, or approve?  
+What blockers exist?
+
+Use this format in Slack threads, bridge updates, and stakeholder pings. It cuts noise and ensures people hear what matters.
+
+**Example Update:**
+C: Elevated 5xxs on checkout API, spike at 10:14 UTC
+A: Rolled back 10:00 deploy, investigating DB connection pool
+N: Need SRE to confirm read replica lag in #checkout-db
+
+Want to scale this? Use a Slack `/can` shortcut to prompt structured updates or train leads to anchor standups and bridges with it.
 
 * **Decision Log:** Key decisions and actions logged in real-time. ✍️
-* **Avoid Chasing Shiny Objects:** Focus on current hypotheses and workstreams.
-
----
+* **Avoid Chasing Shiny Objects:** Focus communication on current hypotheses and active workstreams. Archive dead ends.
 
 #### 🧠 Speak the Same Language: Standardized Terminology in High-Pressure Environments
 
 Communication during an incident hinges not just on speed, but clarity. Terminology friction—when responders don't speak the same operational language—slows things down, increases error rates, and misroutes work. The fix isn't fancy tooling—it's consistent language, used everywhere.
 
-##### ✂️ Terseness, Not Obscurity
+### ✂️ Terseness, Not Obscurity
 
 Terse language is a feature, not a bug. But it becomes a liability when masked behind team aliases, obscure acronyms, or insider references.
 
 If someone says “get Bluebird on it” and half the team doesn't know that's the Traffic SRE group, you've just added confusion. Similarly, acronyms like “MARS” mean different things to different teams. Assume nothing. Spell it out.
 
-##### 🧩 Consistency Across the Stack
+### 🧩 Consistency Across the Stack
 
 Standardized terminology should appear everywhere:
 - 📚 Documentation  
@@ -900,9 +953,9 @@ Standardized terminology should appear everywhere:
 - 💬 Slack channels  
 - 🎥 Video call agendas  
 
-Pick a canonical industry wide term—“Probes,” not “Canaries”—and use it across the board. One word, one meaning, zero ambiguity.
+Pick a canonical term—“Probes,” not “Canaries”—and use it across the board. One word, one meaning.
 
-##### 🏗️ Build Language Into Culture
+### 🏗️ Build Language Into Culture
 
 Clear, shared language reflects a strong ops culture. Encourage staff engineers and ICs to model it. Bake it into code reviews, alert payloads, postmortems, and onboarding.  
 
@@ -910,7 +963,7 @@ You don't need to sound clever. You need to be understood.
 
 > ✅ The best responders sound boring. Clear, repeatable, boring language wins.
 
-#### Slack First, Zoom If You Must
+### Slack First, Zoom If You Must
 
 When every second matters, Slack is your command center. Zoom is supplementary.
 
@@ -929,14 +982,14 @@ Zoom? Great for:
 But if a decision is made on Zoom, someone *must* write it into Slack.  
 📢 If it didn't make it to the channel, it didn't happen.
 
-#### Communication Tools & Workflows
+### Communication Tools & Workflows
 
 - 🤖 **ChatOps Integration:** Declare incidents, assign roles, send updates—all from chat
 - 🧑‍💻 **Video Conferencing:** For synchronous problem-solving, but keep it lean
 - 🧾 **Shared Docs:** Google Docs, Datadog Notebooks, Confluence—use these for central logging and coordination
 - 📋 **Comms Templates:** Pre-approved messages for status pages, internal updates, and exec briefings
 
-#### External Communication: Managing Stakeholder Expectations
+### External Communication: Managing Stakeholder Expectations
 
 **Segment your audience:**
 
@@ -950,7 +1003,6 @@ But if a decision is made on Zoom, someone *must* write it into Slack.
 
 > 🔑 **Key Takeaway:**  
 > Clarity under pressure isn't optional—it's the product of culture, structure, and repetition. Use Slack as your cockpit, use language precisely, and give everyone the same map. The only good chaos is the kind you're driving.
-
 
 ### 10. Managing People, Pace & Burnout 🧘
 
