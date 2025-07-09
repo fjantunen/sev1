@@ -378,6 +378,14 @@ A robust service catalog is indispensable:
 > ✅ **Checklists:**
 > Always clearly structure docs as checklists to reduce errors and ensure critical steps aren't missed.
 
+#### Ultra-Terse Runbooks & Visual Cues ✂️👀
+
+Runbooks are most useful when they’re scannable under stress. In high-tempo incidents, no one wants a wall of text. What we’ve found effective is writing runbooks in ultra-terse, command-style language. Think: checklist, not essay.
+
+Add visual cues—like emojis or icons—to guide the eye to high-priority actions (`🛑 STOP`, `🧪 VERIFY`, `✅ DONE`). These cues reduce mental overhead, especially when runbooks are embedded directly into alert payloads or chat workflows. The goal is clarity and speed, not cuteness.
+
+> 💡 **Tip:** If your runbook isn’t readable in five seconds during a fire, it’s too long.
+
 #### Auto-remediation: Guardrails & Pitfalls 🤖
 
 Automation can act faster than humans, but speed without context is dangerous.
