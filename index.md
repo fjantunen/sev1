@@ -859,56 +859,98 @@ They treat every belief as a draft. Confidence as temporary. Clarity as somethin
 
 During an incident, clear communication is paramount. Misinformation or lack of information fuels panic and slows resolution.
 
+---
+
 #### Internal Communication: Keeping the Team Aligned
 
 * **Dedicated Incident Channel:** A central place (e.g., Slack, Teams) for all incident-related communication. 💬
 * **Regular Updates:** IC or Comms Lead provides concise updates every 30 minutes (or as agreed).
-* **Structured Updates (e.g., SBAR):**
-    * **S**ituation: What's happening?
-    * **B**ackground: When did it start? What's known?
-    * **A**ssessment: What's the impact? What's the severity?
-    * **R**ecommendation: What's the next step?
+* **Structured Updates (e.g., CAN):**
+  - **C**ondition: What's happening right now? What's known?
+  - **A**ction: What have we done or are doing next?
+  - **N**eed: What do we need? Help, approvals, decisions?
+
+**Example:**
+C: Checkout API error rate 42%, spike began at 10:14 UTC
+A: Rolled back 10:00 deploy, validating rollback effect
+N: Need DB SME to confirm read replica lag in #checkout-db
+
 * **Decision Log:** Key decisions and actions logged in real-time. ✍️
-* **Avoiding Chasing Shiny Objects:** Focus communication on current efforts and next steps.
+* **Avoid Chasing Shiny Objects:** Focus on current hypotheses and workstreams.
 
-#### External Communication: Managing Stakeholder Expectations
+---
 
-* **Audience Segmentation:**
-    * **Internal Stakeholders:** Product, Sales, Marketing, Leadership. Need impact, estimated time to restore (ETR), and business implications. 📈
-    * **Customers:** Via status page, email, social media. Need clear, honest, and timely updates. Transparent but not overly technical. 🌐
-* **Status Page:** Your single source of truth for external updates. Should be updated frequently.
-* **Templates:** Have pre-approved communication templates for different sceanrios. 📋
+#### 🧠 Speak the Same Language: Standardized Terminology in High-Pressure Environments
 
-> 🚨 **Crisis Communication Tip:**
-> When communicating externally, always err on the side of transparency. Acknowledge impact, provide updates frequently, and communicate when you *don't* have an update (e.g., "Still investigating, next update in 15 minutes").
+Communication during an incident hinges not just on speed, but clarity. Terminology friction—when responders don't speak the same operational language—slows things down, increases error rates, and misroutes work. The fix isn't fancy tooling—it's consistent language, used everywhere.
 
-#### Communication Tools & Workflows
+##### ✂️ Terseness, Not Obscurity
 
-* **Chat Ops Integration:** Tools that allow declaring incidents, assigning roles, and sending updates directly from chat. 🤖
-* **Video Conferencing:** For deep dives and real-time collaboration among the technical team. 🧑‍💻
-* **Incident Management Platforms:** Incident.io, Rootly, PagerDuty, FireHydrant – centralize alerting, on-call schedules, and incident communication workflows.
+Terse language is a feature, not a bug. But it becomes a liability when masked behind team aliases, obscure acronyms, or insider references.
+
+If someone says “get Bluebird on it” and half the team doesn't know that's the Traffic SRE group, you've just added confusion. Similarly, acronyms like “MARS” mean different things to different teams. Assume nothing. Spell it out.
+
+##### 🧩 Consistency Across the Stack
+
+Standardized terminology should appear everywhere:
+- 📚 Documentation  
+- 📇 Service catalogs  
+- 📈 Dashboards  
+- 🧾 Runbooks  
+- 💬 Slack channels  
+- 🎥 Video call agendas  
+
+Pick a canonical industry wide term—“Probes,” not “Canaries”—and use it across the board. One word, one meaning, zero ambiguity.
+
+##### 🏗️ Build Language Into Culture
+
+Clear, shared language reflects a strong ops culture. Encourage staff engineers and ICs to model it. Bake it into code reviews, alert payloads, postmortems, and onboarding.  
+
+You don't need to sound clever. You need to be understood.
+
+> ✅ The best responders sound boring. Clear, repeatable, boring language wins.
 
 #### Slack First, Zoom If You Must
 
-When every second matters, **Slack is your command center**. Zoom is supplementary—not your primary war room.
+When every second matters, Slack is your command center. Zoom is supplementary.
 
-Text-based channels like Slack give responders the edge:
+**Why Slack wins:**
+- 🧵 Organized, threaded updates
+- ⏮️ Catch-up scroll for late joiners
+- 🔍 Searchable for retros
+- 🤖 Integrates with alerting and runbooks
+- 🧑‍💻 Supports multiple simultaneous workstreams
 
-- **Asynchronous updates:** People can contribute without interrupting others. Updates are threaded and organized, not blurted out mid-sentence like on Zoom.
-- **Scrollback and catch-up:** New responders can scan the channel, read key threads, and jump in fast. No “Can someone catch me up?” interruptions.
-- **Persistent record:** Everything said in Slack is timestamped, searchable, and reusable for retros. Zoom might offer a transcript—if someone hit record—and good luck parsing it after a six-hour bridge.
-- **Parallel investigation:** Slack supports multiple simultaneous workstreams. Zoom forces a single-threaded conversation. One person shares a screen. Everyone else watches.
-- **Tool integration:** Slack connects to your monitoring stack, ticketing systems, and runbooks. Zoom connects to... calendars.
+Zoom? Great for:
+- High-bandwidth whiteboarding
+- Terse IC handovers
+- Briefings to non-technical stakeholders
 
-Zoom isn't useless—but it's **a scalpel, not a scalpel drawer**. Use it for:
-- Initial triage or leadership sync-ups
-- Whiteboard sessions for gnarly, collaborative debugging
-- Briefings to non-technical stakeholders who expect verbal updates
+But if a decision is made on Zoom, someone *must* write it into Slack.  
+📢 If it didn't make it to the channel, it didn't happen.
 
-But whatever happens in Zoom should be captured in Slack. If it didn't make it to the channel, it didn't happen.
+#### Communication Tools & Workflows
 
-> 🔑 **Key Takeaway:**
-> Effective incident communication is structured, timely, and audience-aware. It builds trust, reduces noise, and ensures everyone stays aligned towards resolution. Command and coordination live in Slack. Use Zoom like a side-room—not the control tower.
+- 🤖 **ChatOps Integration:** Declare incidents, assign roles, send updates—all from chat
+- 🧑‍💻 **Video Conferencing:** For synchronous problem-solving, but keep it lean
+- 🧾 **Shared Docs:** Google Docs, Datadog Notebooks, Confluence—use these for central logging and coordination
+- 📋 **Comms Templates:** Pre-approved messages for status pages, internal updates, and exec briefings
+
+#### External Communication: Managing Stakeholder Expectations
+
+**Segment your audience:**
+
+- 🧑‍💼 **Internal Stakeholders:** Need impact, ETR, and recovery plans
+- 🌐 **Customers/Public:** Want honesty, clarity, and regular updates
+
+**Pro Tips:**
+- Set expectations for updates (“Next update in 15 minutes”)
+- Don't wait for answers—say what you know and what you're doing next
+- Coordinate closely with support, marketing, and comms
+
+> 🔑 **Key Takeaway:**  
+> Clarity under pressure isn't optional—it's the product of culture, structure, and repetition. Use Slack as your cockpit, use language precisely, and give everyone the same map. The only good chaos is the kind you're driving.
+
 
 ### 10. Managing People, Pace & Burnout 🧘
 
