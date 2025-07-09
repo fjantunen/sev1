@@ -35,7 +35,7 @@ All trademarks, logos, and brand names mentioned are the property of their respe
 
 Mentions of specific services, platforms, or vendors—including but not limited to PagerDuty, Datadog, Honeycomb, Gremlin, Netflix, Google, PayPal, and Microsoft—are made for example and context. No payments, sponsorships, or kickbacks were received. This book promotes no specific tool or service. All references are used in a neutral, educational context.
 
-The content is provided “as-is.” Readers assume full responsibility for the use of any information presented herein. Always evaluate ideas in the context of your organization’s specific needs and risks.
+The content is provided “as-is.” Readers assume full responsibility for the use of any information presented herein. Always evaluate ideas in the context of your organization's specific needs and risks.
 
 ### Table of Contents 📜
 
@@ -62,7 +62,7 @@ The content is provided “as-is.” Readers assume full responsibility for the 
 [**Part III: After the Incident 📝**](#part-iii-after-the-incident-)
 
 [11. Declaring the End & Recovery 🏁](#11-declaring-the-end--recovery-)  
-[12. Postmortems That Don’t Suck ✨](#12-postmortems-that-dont-suck-)  
+[12. Postmortems That Don't Suck ✨](#12-postmortems-that-dont-suck-)  
 [13. From Lessons to Systems Change 🔄](#13-from-lessons-to-systems-change-)  
 [14. Measuring What Matters 📊](#14-measuring-what-matters-)  
 [15. The Future State of Incident Command 🔮](#15-the-future-state-of-incident-command-)
@@ -73,15 +73,15 @@ The content is provided “as-is.” Readers assume full responsibility for the 
 
 ### Acknowledgements 🙏
 
-To my family, who never asked why I was obsessed with writing this book—just made sure I didn’t forget to eat. Thank you for the support! ❤️
+To my family, who never asked why I was obsessed with writing this book—just made sure I didn't forget to eat. Thank you for the support! ❤️
 
-To Eric, who’s been a great mentor and a constant source of inspiration.
+To Eric, who's been a great mentor and a constant source of inspiration.
 
-To everyone I’ve worked with over the years. 🤝
+To everyone I've worked with over the years. 🤝
 
-To the Learning From Incidents community, and to those who’ve pushed reliability thinking beyond dashboards and into the human domain—your work paved the way for this one.
+To the Learning From Incidents community, and to those who've pushed reliability thinking beyond dashboards and into the human domain—your work paved the way for this one.
 
-Thank you to everyone who’s ever written a clear postmortem, spoken up when something felt off, or challenged process for the sake of people. You’ve made this field more humane, and this book wouldn’t exist without your example.
+Thank you to everyone who's ever written a clear postmortem, spoken up when something felt off, or challenged process for the sake of people. You've made this field more humane, and this book wouldn't exist without your example.
 
 And to anyone who reads this and offers value for value—thank you. That exchange means more than you know. ✨
 
@@ -89,19 +89,19 @@ And to anyone who reads this and offers value for value—thank you. That exchan
 
 When I got into tech in June 2000—slapping together fugly websites, streaming low-res videos, and trying to keep NT4 servers running—before YouTube was even a concept, I was live streaming, running end-to-end event production and becoming the SME for anything streaming or CDN. 👨‍💻
 
-By 2011, I’d stumbled into incident management. The industry was deep in its ITIL hangover—rigid process, thick hierarchies, and enough red tape to mummify a data center. 📜 It brought order, sure, but agility? Like trying to steer a cargo ship with a joystick. 🚢
+By 2011, I'd stumbled into incident management. The industry was deep in its ITIL hangover—rigid process, thick hierarchies, and enough red tape to mummify a data center. 📜 It brought order, sure, but agility? Like trying to steer a cargo ship with a joystick. 🚢
 
-Then came the SRE wave. 🌊 Suddenly everyone wanted to “do SRE,” flipping the script on how we think about reliability and response. But despite all the tooling, the frameworks, the culture decks—we’re still flailing when it comes to human factors.
+Then came the SRE wave. 🌊 Suddenly everyone wanted to “do SRE,” flipping the script on how we think about reliability and response. But despite all the tooling, the frameworks, the culture decks—we're still flailing when it comes to human factors.
 
-I’ve ridden every wave since—sometimes surfing 🏄‍♂️, sometimes just staying afloat. In 2018, working at a startup, I got my first exposure into the role of incident commander. No training, no playbook, barely any system visibility. Just raw chaos, flaming chainsaws 🔥🪚, and the expectation to “own it.” That trial by fire taught me this: strong incident command is non-negotiable, especially when you’re also wearing three other hats. 🎩🎩🎩
+I've ridden every wave since—sometimes surfing 🏄‍♂️, sometimes just staying afloat. In 2018, working at a startup, I got my first exposure into the role of incident commander. No training, no playbook, barely any system visibility. Just raw chaos, flaming chainsaws 🔥🪚, and the expectation to “own it.” That trial by fire taught me this: strong incident command is non-negotiable, especially when you're also wearing three other hats. 🎩🎩🎩
 
-Across startups and giants, I’ve watched teams fumble and stall—not because they lacked tools, but because they ignored culture. Fixing incident management means wrestling that beast. And let’s not kid ourselves—it’s like sprinting uphill through molasses.
+Across startups and giants, I've watched teams fumble and stall—not because they lacked tools, but because they ignored culture. Fixing incident management means wrestling that beast. And let's not kid ourselves—it's like sprinting uphill through molasses.
 
-**SEV1 – The Art of Incident Command** is the distilled chaos. Not sanitized “best practices,” but the book I wish someone had handed me when I was drowning. It’s built from scars, scraped from real-world incidents, and shaped by teams both scrappy and sprawling.
+**SEV1 – The Art of Incident Command** is the distilled chaos. Not sanitized “best practices,” but the book I wish someone had handed me when I was drowning. It's built from scars, scraped from real-world incidents, and shaped by teams both scrappy and sprawling.
 
 Today, incident response is a three-ring circus: engineers juggling pagers 📟, debugging blind 🕶️, and improvising in real time while the stakes climb and the tooling sprawls. This book is your survival guide and your last line of defense.
 
-🌊 The water’s rough. Are you ready to jump in?
+🌊 The water's rough. Are you ready to jump in?
 
 —Frank Jantunen
 
@@ -190,7 +190,7 @@ Redundancy can mask fragility. Instead of fixing flaky systems, teams add layers
 
 **Resilience** means being honest about what breaks, why, and what to do when it breaks again.
 
-It’s about graceful degradation, fast recovery, and human readiness.
+It's about graceful degradation, fast recovery, and human readiness.
 
 Resilient teams:
 
@@ -255,7 +255,7 @@ Bridge-building strategies:
 * 🧪 Support experimentation
 
 > 🔑 **Key Takeaway:**
-> Culture isn’t a slide deck or a slogan. It’s what people actually do—under pressure, in the dark, without a script.
+> Culture isn't a slide deck or a slogan. It's what people actually do—under pressure, in the dark, without a script.
 > If you want real resilience, you need both: systems built to absorb shocks, and teams trained to adapt.
 
 
@@ -380,11 +380,11 @@ A robust service catalog is indispensable:
 
 #### Ultra-Terse Runbooks & Visual Cues ✂️👀
 
-Runbooks are most useful when they’re scannable under stress. In high-tempo incidents, no one wants a wall of text. What we’ve found effective is writing runbooks in ultra-terse, command-style language. Think: checklist, not essay.
+Runbooks are most useful when they're scannable under stress. In high-tempo incidents, no one wants a wall of text. What we've found effective is writing runbooks in ultra-terse, command-style language. Think: checklist, not essay.
 
 Add visual cues—like emojis or icons—to guide the eye to high-priority actions (`🛑 STOP`, `🧪 VERIFY`, `✅ DONE`). These cues reduce mental overhead, especially when runbooks are embedded directly into alert payloads or chat workflows. The goal is clarity and speed, not cuteness.
 
-> 💡 **Tip:** If your runbook isn’t readable in five seconds during a fire, it’s too long.
+> 💡 **Tip:** If your runbook isn't readable in five seconds during a fire, it's too long.
 
 #### Auto-remediation: Guardrails & Pitfalls 🤖
 
@@ -480,8 +480,8 @@ Start with safe, controlled experiments in staging/dev environments.
 | **Level 4** | Adaptive: System adjusts based on live feedback |
 
 > 🔑 **Key Takeaway:**
-> You can’t control when the next incident hits—but you can train your team to meet it with confidence.
-> Chaos engineering and simulation aren't optional; they’re how you transform individual skill into organizational readiness.
+> You can't control when the next incident hits—but you can train your team to meet it with confidence.
+> Chaos engineering and simulation aren't optional; they're how you transform individual skill into organizational readiness.
 
 ## PART II: During the Incident 🔥
 
@@ -560,7 +560,7 @@ The IC is like the conductor of an orchestra—they don't play every instrument,
 * **Handover:** Clearly transfer command when shifts change. 🤝
 
 > 🙅‍♀️ **What an IC is NOT:**
-> The IC is *not* the person who fixes the problem. They are the person who ensures the problem *gets fixed*. Resist the urge to dive into debugging!
+> The IC is *not* the person who fixes the problem. If the incident commander is glued to dashboards, no one is steering the response! They are the person who ensures the problem *gets fixed*. Delegate the analysis. Coordinate the people. Stay above the weeds. Resist the urge to dive into debugging!
 
 #### Incident Roles and Responsibilities
 
@@ -613,14 +613,14 @@ Options include:
 - **Confluence Page**: structured, versioned, good for longer-running events
 
 The landing page should contain:
-- Summary of the incident (what’s known, what’s being worked on)
+- Summary of the incident (what's known, what's being worked on)
 - Current severity
 - IC and workstream leads
 - Links to active Slack threads
 - Timeline of major updates and decisions
 - Open questions and blockers
 
-Drop this link early and often. Anyone asking “What’s going on?” gets pointed here first.
+Drop this link early and often. Anyone asking “What's going on?” gets pointed here first.
 
 #### Slack Discipline
 
@@ -639,9 +639,9 @@ Video bridges are useful—but risky when unmanaged. Treat them like a war room,
 Best practices:
 - Keep it to IC, workstream leads, and one comms person
 - Use the bridge for decision checkpoints, not passive chatter
-- (Optional) Stream it for observers, but don’t let everyone join live
+- (Optional) Stream it for observers, but don't let everyone join live
 
-Most tactical work still happens in Slack or docs. If your bridge feels like a hangout, it’s time to trim the invite list.
+Most tactical work still happens in Slack or docs. If your bridge feels like a hangout, it's time to trim the invite list.
 
 Every responder wants to help. Make it easy for them to be useful without becoming a distraction.
 
@@ -666,8 +666,36 @@ The OODA Loop (Observe, Orient, Decide, Act) is a powerful model for rapid decis
 
 Then, the loop repeats, constantly adapting to new information. This iterative process is vital in chaotic environments.
 
+#### Seek Clarity Early 🧭
+
+Incidents start in a fog. Dashboards light up. Alerts fire. Slack fills with noise. It's easy to confuse motion with progress. But flailing fast is still flailing. The Incident Commander's first job isn't to fix—it's to make sense.
+
+Clarity is the compass. Not certainty. Not root cause. Just a grounded view of what's happening, what isn't, and what needs attention.
+
+Start with the basics:
+What do we actually know  
+What's a guess vs a fact  
+What's the impact  
+Is anything improving  
+
+Say it out loud. Ask others to explain their thinking. If someone says, “It's the database,” ask why. Ask what would prove that wrong. Not to challenge—just to stabilize the narrative.
+
+Use structure. A shared doc. A pinned update. A list of knowns, unknowns, blockers. These small anchors reduce thrash and keep the room moving together.
+
+If you don't create shared clarity, people will invent their own. That's when duplicate work creeps in. Updates conflict. Progress stalls.
+
+Epistemology reminds us: every view is partial. Dashboards are keyholes. Alerts are shadows. Metrics simplify reality. The hard part isn't knowing what's broken—it's knowing what you can't see.
+
+That's why great responders practice epistemic humility. They ask:  
+What might I be missing  
+What assumptions are baked into this signal  
+What else could explain this  
+What would prove me wrong  
+
+They treat every belief as a draft. Confidence as temporary. Clarity as something you build and re-check, not something you declare once and move on.
+
 > 🔑 **Key Takeaway:**
-> Strong incident command isn't about individual heroics; it's about structured leadership, clear roles, and rapid, iterative decision-making to tame the chaos.
+> Strong incident command isn't about individual heroics; it's about structured leadership, clear roles, and rapid, iterative decision-making to tame the chaos. In the fog of an incident, clarity beats certainty. But clarity without humility turns into overconfidence. Question everything—especially your own assumptions.
 
 ### 9. Communication Under Pressure 🗣️
 
@@ -702,8 +730,27 @@ During an incident, clear communication is paramount. Misinformation or lack of 
 * **Video Conferencing:** For deep dives and real-time collaboration among the technical team. 🧑‍💻
 * **Incident Management Platforms:** Incident.io, Rootly, PagerDuty, FireHydrant – centralize alerting, on-call schedules, and incident communication workflows.
 
+#### Slack First, Zoom If You Must
+
+When every second matters, **Slack is your command center**. Zoom is supplementary—not your primary war room.
+
+Text-based channels like Slack give responders the edge:
+
+- **Asynchronous updates:** People can contribute without interrupting others. Updates are threaded and organized, not blurted out mid-sentence like on Zoom.
+- **Scrollback and catch-up:** New responders can scan the channel, read key threads, and jump in fast. No “Can someone catch me up?” interruptions.
+- **Persistent record:** Everything said in Slack is timestamped, searchable, and reusable for retros. Zoom might offer a transcript—if someone hit record—and good luck parsing it after a six-hour bridge.
+- **Parallel investigation:** Slack supports multiple simultaneous workstreams. Zoom forces a single-threaded conversation. One person shares a screen. Everyone else watches.
+- **Tool integration:** Slack connects to your monitoring stack, ticketing systems, and runbooks. Zoom connects to... calendars.
+
+Zoom isn't useless—but it's **a scalpel, not a scalpel drawer**. Use it for:
+- Initial triage or leadership sync-ups
+- Whiteboard sessions for gnarly, collaborative debugging
+- Briefings to non-technical stakeholders who expect verbal updates
+
+But whatever happens in Zoom should be captured in Slack. If it didn't make it to the channel, it didn't happen.
+
 > 🔑 **Key Takeaway:**
-> Effective incident communication is structured, timely, and audience-aware. It builds trust, reduces noise, and ensures everyone stays aligned towards resolution.
+> Effective incident communication is structured, timely, and audience-aware. It builds trust, reduces noise, and ensures everyone stays aligned towards resolution. Command and coordination live in Slack. Use Zoom like a side-room—not the control tower.
 
 ### 10. Managing People, Pace & Burnout 🧘
 
@@ -784,7 +831,7 @@ A clear, unambiguous "all clear" signal helps shift the team's focus from crisis
 > 🔑 **Key Takeaway:**
 > A clear and deliberate closure process ensures true resolution, prevents "phantom incidents," and smoothly transitions the team to the critical learning phase.
 
-### 12. Postmortems That Don’t Suck ✨
+### 12. Postmortems That Don't Suck ✨
 
 The post-mortem (or post-incident review) is the most critical learning opportunity. A "good" post-mortem isn't about assigning blame; it's about understanding and improving.
 
@@ -824,7 +871,7 @@ A robust post-mortem document typically includes:
 
 #### Positive Retrospectives: When Nothing Broke (Because You Did It Right) ✨
 
-We usually wait for things to break before we learn from them. But some of the best signals come from the near-misses—the moments where something *could* have gone sideways but didn’t.
+We usually wait for things to break before we learn from them. But some of the best signals come from the near-misses—the moments where something *could* have gone sideways but didn't.
 
 Maybe a deploy was flagged and rolled back before it hit prod. Maybe someone spotted an odd metric pattern, kicked off an investigation, and quietly averted a major issue. Maybe a fallback system kicked in perfectly and no one even noticed there was a problem.
 
@@ -832,20 +879,20 @@ These are not accidents. These are *successes*. And they deserve just as much at
 
 We call these **positive retrospectives**.
 
-A positive retrospective is a deliberate look back at a time when the system, the team, or the process caught something early and acted before damage occurred. It’s not about high-fives or chest-thumping. It’s about studying *what worked*, so you can do it again.
+A positive retrospective is a deliberate look back at a time when the system, the team, or the process caught something early and acted before damage occurred. It's not about high-fives or chest-thumping. It's about studying *what worked*, so you can do it again.
 
 **What to explore in a positive retro:**
 - What signals or behaviors helped us catch the issue early?
 - How did the tooling, alerting, or intuition contribute?
-- What would’ve happened if we hadn’t acted?
+- What would've happened if we hadn't acted?
 - How do we make this kind of response repeatable and teachable?
 
-You’re not chasing a root cause here—you're mapping the early warning system and the immune response. These moments are often quiet wins that disappear into the noise unless someone captures them.
+You're not chasing a root cause here—you're mapping the early warning system and the immune response. These moments are often quiet wins that disappear into the noise unless someone captures them.
 
-If you want real resilience, you can't just study failures. You have to study the things that *almost* failed but didn’t. They show you where your systems flexed instead of snapped, and where your people trusted their gut and were right.
+If you want real resilience, you can't just study failures. You have to study the things that *almost* failed but didn't. They show you where your systems flexed instead of snapped, and where your people trusted their gut and were right.
 
 > 🔑 **Key Takeaway:**  
-> Celebrate the anti-incidents. They’re often invisible, but they’re proof your systems—and your people—are getting stronger.
+> Celebrate the anti-incidents. They're often invisible, but they're proof your systems—and your people—are getting stronger.
 
 ### 13. From Lessons to Systems Change 🔄
 
