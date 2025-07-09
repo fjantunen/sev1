@@ -577,6 +577,74 @@ Effective incident response relies on clear roles:
 > ❗ **Important:**
 > In many organizations, one person may wear multiple hats initially, but the *mindset* of these distinct roles is crucial.
 
+#### Handling Swarming: Creating Focused Workstreams During Chaos
+
+Large-scale incidents often attract a flood of well-meaning responders. Slack fills with noise. The bridge becomes a spectator sport. People want to help—but without structure, they end up repeating efforts, derailing focus, or just adding background chaos.
+
+The IC's job isn't to shut people out. It's to create order from the influx. That means giving the swarm something useful to do—and somewhere to do it.
+
+#### Break Into Workstreams
+
+Divide the incident into focused areas of investigation or remediation. These typically follow existing team boundaries or runbook domains.
+
+Examples:
+- **Database Health** (locks, replication lag, disk space)
+- **API Failures** (rate limits, 5xx spikes, error logs)
+- **Frontend Impact** (latency, broken UX, error surfaces)
+- **Infrastructure** (network partitions, cloud zones, DNS/CDN)
+- **Rollback Options** (risk assessment, build artifacts, toggles)
+- **Customer Comms / Executive Liaison** (status page, internal updates)
+
+Each workstream should have:
+- **One lead**, responsible for updates and decisions
+- **One channel or Slack thread** for discussion
+- **A goal** ("Confirm DB replication is healthy", "Identify safe rollback target")
+- **A doc or scratchpad** to track progress
+
+This keeps effort compartmentalized and allows the IC to move horizontally without micromanaging.
+
+#### Use a Shared Landing Page
+
+Establish a central document to orient everyone. This is the front door for anyone dropping into the incident.
+
+Options include:
+- **Datadog Notebook**: best for observability-driven response
+- **Google Doc**: quick to set up, easy to update
+- **Confluence Page**: structured, versioned, good for longer-running events
+
+The landing page should contain:
+- Summary of the incident (what’s known, what’s being worked on)
+- Current severity
+- IC and workstream leads
+- Links to active Slack threads
+- Timeline of major updates and decisions
+- Open questions and blockers
+
+Drop this link early and often. Anyone asking “What’s going on?” gets pointed here first.
+
+#### Slack Discipline
+
+Avoid the scroll-of-death. Centralize updates in a few clearly named threads:
+
+- 🧵 `network`
+- 🧵 `statuspage`
+- 🧵 `compute`
+
+Pin these in the incident channel or on the landing page. ICs should post summary updates, not raw logs. Ask responders to reply in the relevant thread, not the main channel.
+
+#### Managing the Video Bridge
+
+Video bridges are useful—but risky when unmanaged. Treat them like a war room, not a water cooler.
+
+Best practices:
+- Keep it to IC, workstream leads, and one comms person
+- Use the bridge for decision checkpoints, not passive chatter
+- (Optional) Stream it for observers, but don’t let everyone join live
+
+Most tactical work still happens in Slack or docs. If your bridge feels like a hangout, it’s time to trim the invite list.
+
+Every responder wants to help. Make it easy for them to be useful without becoming a distraction.
+
 #### The Incident Lifecycle: From Active to Resolved
 
 1.  **Detection & Declaration:** Alert fires, IC declared. 🚦
@@ -753,6 +821,31 @@ A robust post-mortem document typically includes:
 
 > 🔑 **Key Takeaway:**
 > A blameless postmortem is a gift to your organization. It transforms errors into opportunities for systemic improvement, fostering a culture of continuous learning and resilience.
+
+#### Positive Retrospectives: When Nothing Broke (Because You Did It Right) ✨
+
+We usually wait for things to break before we learn from them. But some of the best signals come from the near-misses—the moments where something *could* have gone sideways but didn’t.
+
+Maybe a deploy was flagged and rolled back before it hit prod. Maybe someone spotted an odd metric pattern, kicked off an investigation, and quietly averted a major issue. Maybe a fallback system kicked in perfectly and no one even noticed there was a problem.
+
+These are not accidents. These are *successes*. And they deserve just as much attention as the big blowups.
+
+We call these **positive retrospectives**.
+
+A positive retrospective is a deliberate look back at a time when the system, the team, or the process caught something early and acted before damage occurred. It’s not about high-fives or chest-thumping. It’s about studying *what worked*, so you can do it again.
+
+**What to explore in a positive retro:**
+- What signals or behaviors helped us catch the issue early?
+- How did the tooling, alerting, or intuition contribute?
+- What would’ve happened if we hadn’t acted?
+- How do we make this kind of response repeatable and teachable?
+
+You’re not chasing a root cause here—you're mapping the early warning system and the immune response. These moments are often quiet wins that disappear into the noise unless someone captures them.
+
+If you want real resilience, you can't just study failures. You have to study the things that *almost* failed but didn’t. They show you where your systems flexed instead of snapped, and where your people trusted their gut and were right.
+
+> 🔑 **Key Takeaway:**  
+> Celebrate the anti-incidents. They’re often invisible, but they’re proof your systems—and your people—are getting stronger.
 
 ### 13. From Lessons to Systems Change 🔄
 
