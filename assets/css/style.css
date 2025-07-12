@@ -1,3 +1,25 @@
+/* Prevent iOS Safari input zoom */
+input, textarea, select {
+  font-size: 16px;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+    font-size: 16px;
+    max-width: 100%;
+  }
+  h1 { font-size: 1.5em; }
+  h2 { font-size: 1.2em; }
+}
+
+/* Focus styles for accessibility */
+a:focus, button:focus {
+  outline: 2px solid #ff6600;
+  outline-offset: 2px;
+}
+
 /* Hide GitHub header + footer */
 .github-corner, header, footer, .header, .footer, .fork-me {
   display: none !important;
