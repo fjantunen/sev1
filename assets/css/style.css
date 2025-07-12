@@ -32,7 +32,7 @@ body {
   font-family: 'Roboto Slab', 'Segoe UI', 'Helvetica Neue', sans-serif;
   line-height: 1.75;
   font-size: 18px;
-  padding: 2rem;
+  padding: 0 2rem 2rem 2rem; /* top right bottom left */
   max-width: 850px;
   margin: 0 auto;
 }
