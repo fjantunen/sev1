@@ -1,5 +1,4 @@
 ---
-layout: default
 title: SEV1 - The Art of Incident Command
 ---
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
@@ -9,17 +8,52 @@ title: SEV1 - The Art of Incident Command
 ## A Modern SRE-Aligned Approach to Incident Management
 By Frank Jantunen
 
-### Why This Matters 🤝
+### Why This Book?
 
-Most books about incident response are locked behind paywalls or written like policy manuals. That's not this.
+Most books on incident response are locked behind paywalls or written like policy manuals. This isn't that.
 
-This book is free to read, remix, and share—because the lessons in here weren't paid for in dollars, but in downtime, lost sleep, and hard-won clarity. We've all inherited systems we didn't build and cultures we didn't choose. But we still show up. We still respond.
+**This is a tactical field guide for the people actually on-call**—the ones who get paged at 3AM and have to lead through the fog of war.
 
-So this book shows up for you.
+If you've ever had to coordinate across Slack threads while pulling logs and writing updates to leadership—this is for you. If you're the only SRE at your org, or part of a centralized team trying to shift culture from the edges, this is especially for you.
 
-It's released under a value-for-value model. That means: if it helps you or your team, send value back—money, feedback, signal boost. Or just pass it to someone else who needs it.
+#### The Mission
 
-No gatekeepers. No DRM. Just trust.
+This book exists to align modern incident response with SRE culture: fast, humane, and relentlessly practical.
+
+It's about using incidents as catalysts—not just to fix systems, but to transform how organizations think and operate. It's a survival manual for the mess and an argument that culture—not just tooling—is what defines reliability.
+
+Incidents drive change. Never let a crisis go to waste.
+
+#### How to Use It
+
+The structure is dead simple: **before, during, and after** the incident. You can jump to any section as needed.
+
+The language is intentionally spartan. No fluff, no filler. Just clear ideas and hard-won practices tested under pressure. Where useful, examples and checklists are designed for scanning mid-incident—not leisurely weekend reading.
+
+#### Why Emojis, Callouts, and Formatting Matter
+
+You're going to see a lot of visual cues in this book: emojis, callout boxes, tight bullets, and bolded takeaways. That's not for style points. That's for **scannability under stress**.
+
+This is written for on-call humans—people skimming this at 3AM, half-asleep, with alerts firing and Slack melting down. The goal isn't clever formatting. The goal is **to make signal pop**.
+
+**Emojis 🧠📉🚨**  
+Used sparingly, they act like visual road signs. They help anchor ideas and break up cognitive load—especially in runbooks, alert payloads, and checklists. If it helps you spot the 🛑 STOP or ✅ DONE faster, it's doing its job.
+
+**Callouts & Takeaways 📦**  
+These isolate what actually matters. They're the stuff people highlight in trainings—or forget when it counts. Use them to orient, not decorate.
+
+**Spartan Layout, Fast Reading 🏃‍♂️**  
+Short paragraphs. Minimal prose. If it takes more than five seconds to understand, it's probably rewritten. This isn't about dumbing things down. It's about reducing friction.
+
+> 🧠 This book isn't a blog. It's a cockpit manual. And every second counts.
+
+#### Value-for-Value
+
+This book is free to read, remix, and share. If it helps you or your team, consider sending value back—feedback, stories, signal boosts, or donations.
+
+There's no DRM. No paywall. Just trust.
+
+If it helps you, pass it on.
 
 ### Copyright Page
 
@@ -170,7 +204,7 @@ Example triggers:
 * Human reports 🙋‍♀️
 * External indicators (status pages, social media) 🐦
 
-#### Example Modern Severity Matrix 🚀
+#### Example Severity Matrix (Impact-Focused) 🚀
 
 | Severity | Impact | Typical Response Time | Examples & Notes |
 | :------- | :----- | :----- | :------ |
@@ -183,6 +217,19 @@ Example triggers:
 
 > 📊 **Reality Check:** Most teams operate with just SEV-1 to SEV-3. Start simple, expand only if needed.
 
+> ### 🔄 Sidebar: Severity vs. Priority
+>
+> 📌 This matrix maps **severity** as a measure of impact—not priority.
+> 
+> - **Severity** = how bad.  
+> - **Priority** = how fast.
+> 
+> A SEV-3 might trigger a P1 if it risks legal exposure. A SEV-2 might be stable and non-urgent.
+> 
+> 🔔 Let the alert decide—use **worst-case interpretation** at time of fire. Severity should reflect what could go wrong if nothing is done. Escalate early; downgrade with certainty.
+> 
+> Treat **severity** as an engineering signal. Treat **priority** as a business response. Most orgs route by SEV; stakeholders triage by P#. If you deal with contracts, SLAs, or compliance—track both.
+
 #### Lifecycle Comparison
 
 | Framework | Lifecycle Steps | Primary Context |
@@ -192,9 +239,7 @@ Example triggers:
 | **NIST** | Preparation → Detection & Analysis → Containment, Eradication & Recovery → Post-Incident Activity | Security-focused response 🛡️ |
 
 > 🔑 **Key Takeaway:**
-> Effective incident management requires knowing which framework to apply and when to adapt. SRE principles thrive on clarity and speed, collapsing the old severity/priority math into a single, actionable SEV level.
->
-> 🔑 **Keep it simple:** map severity to priority directly and define levels by the response they demand.
+>  **Keep it simple:** map severity to priority directly and define levels by the response they demand.
 
 ### 2. Operational Mindset & Culture 🧠
 
@@ -346,7 +391,7 @@ Unless security-sensitive, post in a public `#incidents` channel with an auto-ge
 ~~~
 JIRA# INC-1234
 SEV2 - Checkout - API - High error rate on checkout API
-Slack Channel: #inc-1234
+Slack Channel: #INC-1234
 ~~~
 
 > 🔑 **Key Takeaway:**
@@ -377,7 +422,7 @@ A robust service catalog is indispensable:
 * **Contextualized Observability:** Bridge between metrics and business services
 * **Structured Playbooks:** Organize docs by service
 
-**What a Good Catalog Contains:**
+**What a Service Good Catalog Contains:**
 
 * Service name & description
 * Owner(s) & on-call info 📞
@@ -396,7 +441,7 @@ A robust service catalog is indispensable:
 
 #### Ultra-Terse Runbooks & Visual Cues ✂️👀
 
-Runbooks are most useful when they're scannable under stress. In high-tempo incidents, no one wants a wall of text. What we've found effective is writing runbooks in ultra-terse, command-style language. Think: checklist, not essay.
+Runbooks are most useful when they're scannable under stress. In high-tempo incidents, no one wants a wall of text. What I've found most effective is writing runbooks in ultra-terse, command-style language. Think: checklist, not essay.
 
 Add visual cues—like emojis or icons—to guide the eye to high-priority actions (`🛑 STOP`, `🧪 VERIFY`, `✅ DONE`). These cues reduce mental overhead, especially when runbooks are embedded directly into alert payloads or chat workflows. The goal is clarity and speed, not cuteness.
 
