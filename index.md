@@ -1,5 +1,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
+layout: default
 # SEV1 - The Art of Incident Command
 <img src="assets/book_cover.png" alt="SEV1: The Art of Incident Command" width="375">
 ## A Modern SRE-Aligned Approach to Incident Management
