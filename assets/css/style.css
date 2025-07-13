@@ -90,7 +90,7 @@ blockquote {
 }
 
 table {
-  width: 100%;
+  width: 90%;
   border-collapse: collapse;
   margin: 2em 0;
   font-size: 1rem;
@@ -130,7 +130,7 @@ input, textarea, select {
   body {
     padding: 1rem;
     font-size: 16px;
-    max-width: 100%;
+    max-width: 90%;
   }
   h1 { font-size: 1.5em; }
   h2 { font-size: 1.2em; }
