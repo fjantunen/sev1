@@ -340,13 +340,13 @@ Unless security-sensitive, post in a public `#incidents` channel with an auto-ge
 
 **Example:**
 ~~~
-Jira# INC-1234
+JIRA# INC-1234
 SEV2 - Checkout - API - High error rate on checkout API
 Slack Channel: #inc-1234
 ~~~
 
 > 🔑 **Key Takeaway:**
-> Clear criteria eliminate hesitation. When anyone can declare an incident quickly and transparently, teams respond faster and learn more effectively.
+> Define clear criteria for declaring incidents, this removes hesitation. When anyone can declare an incident quickly and transparently, teams respond faster and learn more effectively.
 
 ### 4. Systems, Playbooks & Observability 🗺️
 
@@ -1047,7 +1047,7 @@ The incident isn't truly over until services are fully restored, systems are sta
 
 Resolution is not just "it's working now." It requires:
 
-* **Service Restoration:** All affected services are back to operational status. ✅
+* **Service Restoration:** All affected services are back to operational status. Including Root Cause service and all dependent services ✅
 * **Impact Mitigated:** Customer-facing impact has ceased. 🛑
 * **Stabilization:** System metrics are normal, no active alerts. 📈
 * **No Known Residual Issues:** No immediate follow-up actions required to maintain stability. 🚫
