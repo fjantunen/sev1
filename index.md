@@ -308,9 +308,9 @@ Bridge-building strategies:
 
 #### Tooling Signals Culture
 
-Your incident management tooling—Slack vs. Teams, PagerDuty vs. homegrown schedulers, orchestrators like FireHydrant, Blameless or Incident.io, and even how you structure observability—says a lot about your engineering culture. These choices shape more than your incident response; they signal what kind of environment you're building and who it's built for.
+Your incident management tooling—Slack vs. Teams, PagerDuty vs. homegrown schedulers, orchestrators like Rootly, FireHydrant, Blameless or incident.io, and even how you structure observability—says a lot about your engineering culture. These choices shape more than your incident response; they signal what kind of environment you're building and who it's built for.
 
-Some tools (and frameworks) come with historical baggage. Others imply a more modern, progressive approach. Slack implies high-context, fast-moving collaboration. Teams might signal heavier governance. PagerDuty suggests urgency and maturity. Blameless implies structured learning and psychological safety.
+Some tools come with historical baggage. Others imply a more modern, progressive approach. Slack implies high-context, fast-moving collaboration. Teams might signal heavier governance. PagerDuty suggests urgency and maturity. Blameless implies structured learning and psychological safety. Homegrown tooling could imply a startup culture, which you may have to maintain.
 
 These are cultural decisions disguised as tooling choices. Your stack becomes your story. Choose with intention—because it attracts (or repels) the kind of engineers you'll end up relying on in a SEV1.
 
