@@ -3,6 +3,13 @@
   display: none !important;
 }
 
+/* iOS Safari: prevent zoom out / scroll jank */
+html, body {
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: manipulation;
+}
+
 /* Base layout: clean white background */
 body {
   background-color: #ffffff;
@@ -124,4 +131,3 @@ tbody tr:hover {
 input, textarea, select {
   font-size: 16px;
 }
-
