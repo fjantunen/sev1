@@ -28,7 +28,17 @@ Incidents drive change. Never let a crisis go to waste.
 
 The structure is dead simple: **before, during, and after** the incident. You can jump to any section as needed.
 
-The language is intentionally spartan. No fluff, no filler. Just clear ideas and hard-won practices tested under pressure. Where useful, examples and checklists are designed for scanning mid-incident—not leisurely weekend reading.
+The language is intentionally spartan. No fluff, no filler. Just clear ideas and hard-won practices tested under pressure.
+
+It's built to match human limitations—especially under cognitive load.
+
+* Incidents happen when you're tired.  
+* Working memory is limited.  
+* Stress narrows focus and kills retention.
+
+That's why the guidance here is short, structured, and designed to be scanned—not read front to back like a novel. It's optimized for clarity during degraded cognition, not academic perfection.
+
+> 🧠 In incident response, the enemy isn't just downtime—it's overload. This book is built for peak usability during peak stress.
 
 #### Why Emojis, Callouts, and Formatting Matter
 
@@ -295,6 +305,14 @@ Bridge-building strategies:
 * Cross-functional drills 🏋️
 * Role flipping 🔄
 * Translation layer 🗣️
+
+#### Tooling Signals Culture
+
+Your incident management tooling—Slack vs. Teams, PagerDuty vs. homegrown schedulers, orchestrators like FireHydrant, Blameless or Incident.io, and even how you structure observability—says a lot about your engineering culture. These choices shape more than your incident response; they signal what kind of environment you're building and who it's built for.
+
+Some tools (and frameworks) come with historical baggage. Others imply a more modern, progressive approach. Slack implies high-context, fast-moving collaboration. Teams might signal heavier governance. PagerDuty suggests urgency and maturity. Blameless implies structured learning and psychological safety.
+
+These are cultural decisions disguised as tooling choices. Your stack becomes your story. Choose with intention—because it attracts (or repels) the kind of engineers you'll end up relying on in a SEV1.
 
 #### 🏗️ Building Resilient Systems: Two Pillars
 
@@ -1083,8 +1101,28 @@ The IC role is incredibly demanding. Self-care is crucial.
 * **Planned Handover:** For longer incidents, have clear handover protocols with a new IC taking over. This includes a full briefing. 🤝
 * **Learn to Say No:** The IC must protect the team from distractions and scope creep during an active incident. 🙅‍♂️
 
-> 🔑 **Key Takeaway:**
-> Managing an incident isn't just about systems; it's about managing humans under stress. Prioritize wellbeing, prevent overload, and foster psychological safety to ensure a sustained, effective response.
+#### Follow-the-Sun Coverage ☀️🌏
+
+Global teams are a superpower—if you use them right.
+
+**Follow-the-sun** coverage reduces fatigue and preserves decision quality by shifting incidents to fresh responders in aligned time zones. Instead of waking up heroes at 3AM, you rotate responsibility across regions as the sun moves.
+
+It only works if:
+
+* There's a **clean handover protocol**  
+* Systems, docs, and dashboards are **shared and mirrored**  
+* Teams trust each other to pick up mid-incident  
+
+This isn't just operationally efficient—it's biologically smart. Humans are not 24/7 systems. Sleep debt, disrupted circadian rhythms, and cognitive fatigue all degrade incident response.
+
+> 🧠 Human factors matter. Tired responders miss signals, miscommunicate, and default to tunnel vision.
+
+**Wake-the-right-person beats wake-the-best-person.** Optimizing for local time zones isn't about laziness—it's about preserving clarity under pressure.
+
+If your team spans multiple continents but you're still running incidents out of a single timezone, you're paying for 24/7—but operating like 9-to-5.
+
+> 🔑 **Key Takeaway:**  
+> Follow-the-sun coverage isn't just about scale—it's about respecting the limits of human cognition. Minimize task switching, protect sleep, and align your processes to human performance windows.
 
 ## PART III: After the Incident 📝
 
