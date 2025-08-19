@@ -859,6 +859,16 @@ Avoid the scroll-of-death. Centralize updates in a few clearly named threads:
 
 Pin these in the incident channel or on the landing page. ICs should post summary updates, not raw logs. Ask responders to reply in the relevant thread, not the main channel.
 
+#### Collective Cognition in Complex Incidents 🧩
+
+In today's systems, no single engineer holds the full map. Each person carries a partial model. One knows the caching layer, another understands the database quirks, someone else has scars from debugging the proxy. On their own, those fragments aren’t enough. But stitched together, they form just enough understanding to guide the team through the fire.
+
+This is why most incidents aren't solved by 'heroes'. The myth of the all-knowing responder collapses under the weight of modern complexity. What works instead is distributed cognition: a group of people pooling their limited perspectives into something greater than the sum of its parts.
+
+The IC's role is to turn that messy collection of partial knowledge into coordinated action. You don't need every responder to understand the whole system. You need them to contribute their piece and trust that others are doing the same. The commander acts as the hub, lining up the fragments, and pointing effort where it matters.
+
+The temptation is to chase simplicity, to imagine that if only we had a full blueprint, we could reason our way out of any failure. But real systems don't work like that. They're tangled, adaptive, and too big for any one human. Recovery depends less on perfect knowledge and more on the IC's ability to orchestrate collaboration. That's the art: turning scattered insights into a path forward, even when no one person can see the whole terrain.
+
 #### Managing the Video Bridge
 
 Video bridges are useful—but risky when unmanaged. Treat them like a war room, not a water cooler.
