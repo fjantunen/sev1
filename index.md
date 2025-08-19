@@ -2,7 +2,7 @@
 title: SEV1 - The Art of Incident Command
 ---
 📄 **Download the PDF version**  
-[Recommended for Safari users](./SEV1-The-Art-Of-Incident-Command.pdf)
+[Recommended for Mobile Safari users](./SEV1-The-Art-Of-Incident-Command.pdf)
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 # SEV1 - The Art of Incident Command
