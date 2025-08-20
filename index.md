@@ -2,7 +2,7 @@
 title: SEV1 - The Art of Incident Command
 ---
 📄 **Download the PDF version**  
-[Recommended for Mobile Safari users](./SEV1-The-Art-Of-Incident-Command.pdf)
+[Recommended for Safari iOS users](./SEV1-The-Art-Of-Incident-Command.pdf)
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 # SEV1 - The Art of Incident Command
@@ -339,7 +339,31 @@ These are cultural decisions disguised as tooling choices. Your stack becomes yo
 > Culture isn't a slide deck or a slogan. It's what people actually do—under pressure, in the dark, without a script.
 > If you want real resilience, you need both: systems built to absorb shocks, and teams trained to adapt.
 
+** How Complex Systems Fail ⚡**
 
+Incidents aren't random bad luck. They're the natural byproduct of complex systems doing what complex systems do: surprising us.
+
+Richard Cook’s classic essay How Complex Systems Fail reminds us of a few uncomfortable truths:
+
+Every system is already broken.
+At any given moment, parts of your system are degraded, masked by redundancy or hidden from view. Outages don't 'begin' so much as they finally surface.
+✈️ In aviation, aircraft don't suddenly 'become unsafe', they carry hidden wear, small cracks, and deferred maintenance. Pilots fly with this reality every day.
+
+Safety is an active process.
+Resilience comes from constant adaptation, humans patching gaps, compensating for drift, making micro-decisions that keep the system upright. Failures happen when that safety net frays.
+✈️ Pilots continuously adjust trim, throttle, and heading to keep a plane stable. System safety is the same: a thousand small corrections.
+
+Failure is rarely a single cause.
+We crave root cause, but incidents are usually the culmination of small, latent conditions lining up. The deploy, the config flag, the Friday pager fatigue. They all stack.
+✈️ Airline accidents are almost never one error. They're a chain: weather, crew fatigue, a misread instrument. Break one link and the accident doesn't happen.
+
+People are part of the system.
+Engineers aren't outsiders 'operating' the system, they're embedded in it. Their heuristics, shortcuts, and blind spots shape outcomes as much as code paths and CPU cycles.
+✈️ A pilot isn’t just 'using' the plane, they're part of the control loop. Their judgment, scan patterns, and stress responses directly affect flight safety.
+
+Change equals risk.
+Migrations, deploys, and reconfigurations are where complex systems most often reveal hidden couplings. The system doesn't fail because someone changed it; it fails because the change exposed what was already fragile.
+✈️ Most accidents happen during takeoff and landing—the moments of transition. In software, migrations and deploys are your takeoffs and landings.
 
 ### 3. Clear Criteria for Incident Declaration ✅
 
