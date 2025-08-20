@@ -994,7 +994,7 @@ Every responder wants to help. Make it easy for them to be useful without becomi
 6.  **Recovery:** Bring systems back to full health. 💚
 7.  **Post-Incident Analysis:** Learn from the incident. 📝
 
-#### Decision Making Under Pressure: The OODA Loop 🧠⏱️
+#### Decision Making Under Pressure: The OODA Loop on Steroids🧠⏱️
 
 The OODA Loop Observe, Orient, Decide, Act is your best friend when time is short, facts are fuzzy, and everyone's guessing. It's not a flowchart. It's a muscle. The faster you run it, the faster you adapt.
 
