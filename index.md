@@ -541,6 +541,41 @@ Bonus: Automate the Hygiene
 * 📅 Remind teams to update them after the postmortem.
 * 🔍 Track coverage: flag high-tier services with missing or empty docs.
 
+### Keep Your Documentation Up to Date 📖✨
+
+Living documentation is only useful if it actually reflects reality.  
+Stale runbooks are worse than none, they create 🚨 false confidence, 🐢 wasted time, and 💥 increased risk during a SEV1.  
+Keeping docs current = operational safety 🛡️.
+
+#### What Needs Updating 🛠️
+- 📖 **Runbooks & Playbooks** – remediation steps & decision trees  
+- 🗂️ **Service Catalog Entries** – owners, on-call, dependencies  
+- 📊 **Dashboards & Links** – URLs, metric names, dashboards  
+- 🚨 **Alert Payload References** – runbook links, diagnostic steps  
+- 📢 **Comms Templates** – status page & exec briefings  
+
+#### Cadence ⏱️
+- 🔄 **Event-driven** – update after every incident or PR  
+- 📅 **Quarterly reviews** – sweep high-tier service docs  
+- 🧹 **Annual audit** – org-wide confirmation of ownership & accuracy  
+
+#### Ownership 👥
+- 👩‍💻 **Service Owners** – maintain runbooks  
+- 🧑‍✈️ **Incident Commanders** – maintain process docs  
+- 🛠️ **SRE/Platform Teams** – maintain framework, linting, automation  
+
+#### Make It Easy 🪄
+Keeping docs up to date should feel lightweight, not like a chore:  
+- 📝 **Docs-as-code** – update in the same PR as code changes  
+- 🤖 **Automation** – lint for missing owners, broken links, stale docs  
+- ⚡ **Shortcuts** – Slack bots or CI jobs to remind & link directly  
+- 🔗 **Proximity** – co-locate runbooks next to the service they support  
+- ✅ **Default to edit** – make “fix the doc” the path of least resistance  
+
+> 🔑 Key Takeaway: If it's out of date, it's unsafe ⚠️.  
+> Docs are as critical as 🚨 alerts or 🚀 deploys.  
+> Make it easy to update 🪄, and treat documentation hygiene as part of the work ✅, not an afterthought ❌.
+
 #### Ultra-Terse Runbooks & Visual Cues ✂️👀
 
 Runbooks are most useful when they're scannable under stress. In high-tempo incidents, no one wants a wall of text. What I've found most effective is writing runbooks in ultra-terse, command-style language. Think: checklist, not essay.
@@ -910,6 +945,65 @@ The transition between "alert received" and "incident declared" should be explic
 * When did the issue start?
 * What changed recently?
 * Who else needs to know?
+
+### Which Teams for Which Scenarios 🎯
+
+One of the fastest ways to lose time in a SEV is confusion about *who* should be pulled in. A good response plan doesn't just say *how* to respond, it says *which team owns which kind of fire*.  
+
+Think in scenarios, not org charts. Map common failure domains to clear owners. This keeps escalation crisp and avoids the 'spray and pray' page.  
+
+#### Core Scenarios & Team Mapping
+
+- **Databases (locks, replication lag) 🗄**  
+  ➡ Primary: Database Team  
+  ➡ Secondary: App team using the DB (context on queries, ORM, migrations)
+
+- **Networking, DNS & CDN 🌐**  
+  ➡ Primary: Network/Infra Team  
+  ➡ Secondary: Any impacted edge-service teams (API gateway, frontend)
+
+- **Deployments & Rollbacks 🚀⏪**  
+  ➡ Primary: Owning Service Team (the one who shipped)  
+  ➡ Secondary: Platform/Release Engineering (for tooling, pipelines)
+
+- **Migrations ✈**  
+  ➡ Primary: Team running the migration  
+  ➡ Secondary: Database/Infra for rollback options, coordination
+
+- **Frontend/UI Failures 🎨**  
+  ➡ Primary: Web/App Client Team  
+  ➡ Secondary: API or backend teams feeding the client
+
+- **Third-Party Dependencies ☁**  
+  ➡ Primary: Service Integration Owners  
+  ➡ Secondary: Support/CSMs (status page, customer messaging)
+
+- **Certificates & Secrets 🔑**  
+  ➡ Primary: Security/Infra Team  
+  ➡ Secondary: Affected service team (rotate, re-deploy)
+
+- **Security Incidents 🛡**  
+  ➡ Primary: Security/Trust & Safety Team  
+  ➡ Secondary: SRE/Infra for containment, evidence handling
+
+- **Customer-Facing Impact 💸**  
+  ➡ Primary: Comms/Support Team (status page, internal updates)  
+  ➡ Secondary: IC ensures engineers provide accurate data to feed updates
+
+#### General Rules of Thumb
+
+- If it's **infra-level**, call Infra/SRE.  
+- If it's **service-specific**, call the owning dev team.  
+- If it's **customer-facing narrative**, call Comms/Support.  
+- If it's **security-sensitive**, call Security *immediately*.  
+
+#### 📦 Put It in the Playbook
+
+Don't make responders guess. Bake a simple table or checklist into the response plan:
+
+Scenario → Team(s) → Slack Group/Alias → PagerDuty Rotation
+
+Drop that into your service catalog or incident tooling so the IC can escalate in seconds.
 
 #### Compliance and Business Risk
 
@@ -1412,18 +1506,18 @@ And the best language is the kind that **makes error unlikely**. ✅
 
 In a live incident, every message counts. Misunderstandings burn time. Assumptions cause thrash. *Supercommunicators* (by Charles Duhigg) breaks down how high-performing people navigate critical conversations, not by talking more, but by knowing what type of conversation they're in.
 
-That’s exactly what strong ICs and responders do.
+That's exactly what strong ICs and responders do.
 
 #### 🎯 Conversation Types Map to Incident Modes
 
 | **Supercommunicator Principle**         | **SEV1 Incident Analogy**                                                              |
 |----------------------------------------|----------------------------------------------------------------------------------------|
 | Conversations have types               | Is this update tactical? A hypothesis? An escalation? Match the mode to the message.  |
-| Match the type to the moment           | Don’t dump logs in exec updates. Don’t do status reads in SME threads.                |
+| Match the type to the moment           | Don't dump logs in exec updates. Don't do status reads in SME threads.                |
 | Loop for understanding                 | Repeat back: *'So we think API errors started post-deploy, rollback is underway?'*    |
-| Meta-conversations unblock chaos       | *'Let’s reset. Are we aligned on next steps?'*                                         |
-| Listening over talking                 | Strong ICs don’t monologue, they synthesize.                                            |
-| Psychological safety creates clarity   | If responders feel safe to say *'I don’t know'*, you get signal, not silence.         |
+| Meta-conversations unblock chaos       | *'Let's reset. Are we aligned on next steps?'*                                         |
+| Listening over talking                 | Strong ICs don't monologue, they synthesize.                                            |
+| Psychological safety creates clarity   | If responders feel safe to say *'I don't know'*, you get signal, not silence.         |
 | Summarize often                        | IC status every 10–15 mins keeps everyone moving in sync.                             |
 | Reduce ambiguity                       | Instead of *'looking into DB'*, say *'checking for replication lag on shard-4'*.      |
 | Use the right medium                   | Slack for async logs. Zoom for multi-party diagnosis. Docs for shared clarity.         |
