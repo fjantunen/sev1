@@ -580,7 +580,7 @@ Keeping docs up to date should feel lightweight, not like a chore:
 - 🤖 **Automation** – lint for missing owners, broken links, stale docs  
 - ⚡ **Shortcuts** – Slack bots or CI jobs to remind & link directly  
 - 🔗 **Proximity** – co-locate runbooks next to the service they support  
-- ✅ **Default to edit** – make “fix the doc” the path of least resistance  
+- ✅ **Default to edit** – make 'fix the doc' the path of least resistance  
 
 > 🔑 Key Takeaway: If it's out of date, it's unsafe ⚠️.  
 > Docs are as critical as 🚨 alerts or 🚀 deploys.  
