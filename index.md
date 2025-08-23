@@ -87,7 +87,7 @@ For commercial use—including redistribution, employee training, or internal do
 No part of this publication may be reproduced, stored in a retrieval system, or transmitted by any means—electronic, mechanical, photocopying, recording, or otherwise—for commercial use without prior written permission from the author.
 
 Printed in USA 🇺🇸
-First Edition – June 2025
+Second Edition – August 2025
 
 ### Legal Disclaimer ⚖️
 
@@ -1393,7 +1393,7 @@ Without shared clarity:
 - ⚔️ Updates conflict  
 - 🐌 Progress stalls  
 
-#### 🧘 Practice Epistemic Humility
+#### 🤔 Practice Epistemic Humility
 
 Even with structure, clarity can slip. Remember:  
 - 🔍 Dashboards are **keyholes**  
