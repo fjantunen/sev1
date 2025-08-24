@@ -1291,7 +1291,7 @@ For incident command, migrations must be tracked and treated as core reliability
 
 ⚙️ Configuration drift: Small, undocumented config changes stack into big surprises.
 
-> 🔑 **Key takeaway:** Core reliability events aren't about predicting the future, they're about having a mental map. 🗄 Databases, 🌐 networks, ⏪ rollbacks, ✈️ migrations, ☁ third parties, 🔑 certs, ⚙️ configs. If you start with these in mind, you reduce flailing, frame the investigation, and buy time for the team to dig deeper.
+> 🔑 **Key Takeaway:** Core reliability events aren't about predicting the future, they're about having a mental map. 🗄 Databases, 🌐 networks, ⏪ rollbacks, ✈️ migrations, ☁ third parties, 🔑 certs, ⚙️ configs. If you start with these in mind, you reduce flailing, frame the investigation, and buy time for the team to dig deeper.
 
 #### 🧠⏱️ Decision Making Under Pressure: The OODA Loop (and Its Failure Modes)
 
