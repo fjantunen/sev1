@@ -250,8 +250,7 @@ Example triggers:
 | **SRE** | Detect → Triage → Mitigate → Resolve → Review | Fast-moving, distributed systems 💨 |
 | **NIST** | Preparation → Detection & Analysis → Containment, Eradication & Recovery → Post-Incident Activity | Security-focused response 🛡️ |
 
-> 🔑 **Key Takeaway:**
->  **Keep it simple:** map severity to priority directly and define levels by the response they demand.
+> 🔑 **Key Takeaway:** **Keep it simple:** map severity to priority directly and define levels by the response they demand.
 
 ### 2. Operational Mindset & Culture 🧠
 
@@ -345,8 +344,7 @@ These are cultural decisions disguised as tooling choices. Your stack becomes yo
 * 📡 Develop weak signal sensing
 * 🧪 Support experimentation
 
-> 🔑 **Key Takeaway:**
-> Culture isn't a slide deck or a slogan. It's what people actually do, under pressure, in the dark, without a script.
+> 🔑 **Key Takeaway:** Culture isn't a slide deck or a slogan. It's what people actually do, under pressure, in the dark, without a script.
 > If you want real resilience, you need both: systems built to absorb shocks, and teams trained to adapt.
 
 #### 🧠 Culture Check: See Something, Say Something, Own Something
@@ -389,8 +387,7 @@ Change equals risk. 🔄⚠️
 Migrations, deploys, and reconfigurations are where complex systems most often reveal hidden couplings. The system doesn't fail because someone changed it; it fails because the change exposed what was already fragile.
 ✈️ Most accidents happen during takeoff and landing, the moments of transition. In software, migrations and deploys are your takeoffs and landings.
 
-> 🔑 **Key Takeaway:**
-> Complex systems don't fail in neat linear ways. They fail in messy, emergent ones. Incident command isn't about enforcing perfect order, it's about creating just enough structure and > clarity for responders to navigate that mess. 🌪➡️🧭
+> 🔑 **Key Takeaway:** Complex systems don't fail in neat linear ways. They fail in messy, emergent ones. Incident command isn't about enforcing perfect order, it's about creating just enough structure and > clarity for responders to navigate that mess. 🌪➡️🧭
 
 ### 3. Clear Criteria for Incident Declaration ✅
 
@@ -465,8 +462,7 @@ SEV2 - Checkout - API - High error rate on checkout API
 Slack Channel: #INC-1234
 ~~~
 
-> 🔑 **Key Takeaway:**
-> Define clear criteria for declaring incidents, this removes hesitation. When anyone can declare an incident quickly and transparently, teams respond faster and learn more effectively.
+> 🔑 **Key Takeaway:** Define clear criteria for declaring incidents, this removes hesitation. When anyone can declare an incident quickly and transparently, teams respond faster and learn more effectively.
 
 ### 4. Systems, Playbooks & Observability 🗺️
 
@@ -582,8 +578,7 @@ Keeping docs up to date should feel lightweight, not like a chore:
 - 🔗 **Proximity** – co-locate runbooks next to the service they support  
 - ✅ **Default to edit** – make 'fix the doc' the path of least resistance  
 
-> 🔑 Key Takeaway: If it's out of date, it's unsafe ⚠️.  
-> Docs are as critical as 🚨 alerts or 🚀 deploys.  
+> 🔑 **Key Takeaway:** If it's out of date, it's **unsafe** ⚠️. Docs are as critical as 🚨 alerts or 🚀 deploys.  
 > Make it easy to update 🪄, and treat documentation hygiene as part of the work ✅, not an afterthought ❌.
 
 #### Ultra-Terse Runbooks & Visual Cues ✂️👀
@@ -592,7 +587,7 @@ Runbooks are most useful when they're scannable under stress. In high-tempo inci
 
 Add visual cues, like emojis or icons—to guide the eye to high-priority actions (`🛑 STOP`, `🧪 VERIFY`, `✅ DONE`). These cues reduce mental overhead, especially when runbooks are embedded directly into alert payloads or chat workflows. The goal is clarity and speed, not cuteness.
 
-> 💡 **Tip:** If your runbook isn't readable in five seconds during a fire, it's too long.
+> 💡 **Tip:** If your runbook isn't readable in **five seconds** during a fire, it's too long.
 
 #### 🔎 Pattern-Based Diagnostics & Rule Recognition
 
@@ -631,9 +626,9 @@ These aren't just visuals, they're diagnostic shortcuts. Train responders to nam
 🧠 Signature Detection: Build the Lookup Table
 Experienced responders carry an internal cache:
 
-* What it looked like
-* What broke
-* How it got fixed
+* **What it looked like**
+* **What broke**
+* **How it got fixed**
 
 Externalize it:
 
@@ -666,8 +661,7 @@ Incidents rarely clone each other, but many share archetypes:
 
 Think in structures, not one-off events. Recognize echoes beneath the surface.
 
-> 🔑 Key Takeaway:
-> Pattern recognition turns chaos into signal. Train responders to spot shapes, capture echoes of past failures, and encode them into rules and runbooks. The faster you connect today's graphs to yesterday's lessons, the faster you move from guessing to acting.
+> 🔑 **Key Takeaway:** Pattern recognition turns chaos into signal. Train responders to spot shapes, capture echoes of past failures, and encode them into rules and runbooks. The faster you connect today's graphs to yesterday's lessons, the faster you move from guessing to acting.
 
 #### Auto-remediation: Guardrails & Pitfalls 🤖
 
@@ -895,7 +889,7 @@ Responder training matters because:
 - **Annual Training:** All responders (including ICs) must participate in at least one full-scale simulation each year. This keeps skills sharp, tests evolving systems, and refreshes shared language.  
 - **Ad-hoc Drills:** Teams may run smaller, targeted drills (e.g., rollback practice, comms handover) quarterly or alongside big changes like migrations.  
 
->🔑 Key Takeaway: Incidents aren't the time to practice for the first time. Every drill, every simulation, every dry run is a deposit in the reliability bank. Onboarding builds baseline competence, annual training reinforces it, and ad-hoc drills make sure it sticks.
+>🔑 **Key Takeaway:** Incidents aren't the time to practice for the first time. Every drill, every simulation, every dry run is a deposit in the reliability bank. Onboarding builds baseline competence, annual training reinforces it, and ad-hoc drills make sure it sticks.
 
 #### Chaos Engineering as Ongoing Readiness
 
@@ -937,8 +931,7 @@ Start with safe, controlled experiments in staging/dev environments.
 | **Level 3** | Integrated: Chaos in CI/CD, automate faults |
 | **Level 4** | Adaptive: System adjusts based on live feedback |
 
-> 🔑 **Key Takeaway:**
-> You can't control when the next incident hits—but you can train your team to meet it with confidence.
+> 🔑 **Key Takeaway:** You can't control when the next incident hits—but you can train your team to meet it with confidence.
 > Chaos engineering and simulation aren't optional; they're how you transform individual skill into organizational readiness.
 
 ## PART II: During the Incident 🔥
@@ -1055,8 +1048,7 @@ Not every incident requires immediate action. Sometimes the business accepts ris
 * Emergency access logging
 * Post-incident audits
 
-> 🔑 **Key Takeaway:**
-> The first few minutes are where clarity and chaos compete. Triage is about signal discernment, role clarity, and high-quality intake.
+> 🔑 **Key Takeaway:** The first few minutes are where clarity and chaos compete. Triage is about signal discernment, role clarity, and high-quality intake.
 
 ### 8. Incident Command in Practice 🧑‍✈️
 
@@ -1169,8 +1161,7 @@ Good systems surface this answer automatically:
 
 Great. You've ruled it out, and bought time. Keep investigating, but now without the pressure of ongoing customer impact.
 
-> 🔑 **Key Takeaway:**  
-> The rollback isn't the end. It's a pause button. Use it to stop the bleeding, reorient, and regain control of the incident.
+> 🔑 **Key Takeaway:**  The rollback isn't the end. It's a pause button. Use it to stop the bleeding, reorient, and regain control of the incident.
 
 #### 🚀 Caveats: Roll Forward ≠ Instant Fix
 
@@ -1194,8 +1185,7 @@ Be careful.
 Rollback first. Stabilize.  
 Then decide: do we ship a hotfix, or hold until the dust settles and revisit the deploy with clarity?
 
-> 🔑 **Key Takeaway:**  
-> Roll forward is a bet. Stack the odds. Test in staging first, or be ready to rollback hard.
+> 🔑 **Key Takeaway:**  Roll forward is a bet. Stack the odds. Test in staging first, or be ready to rollback hard.
 
 Each workstream should have:
 - **One lead**, responsible for updates and decisions
@@ -1301,8 +1291,7 @@ For incident command, migrations must be tracked and treated as core reliability
 
 ⚙️ Configuration drift: Small, undocumented config changes stack into big surprises.
 
-> 🔑 Key takeaway:
-> Core reliability events aren't about predicting the future, they're about having a mental map. 🗄 Databases, 🌐 networks, ⏪ rollbacks, ✈️ migrations, ☁ third parties, 🔑 certs, ⚙️ configs. If you start with these in mind, you reduce flailing, frame the investigation, and buy time for the team to dig deeper.
+> 🔑 **Key takeaway:** Core reliability events aren't about predicting the future, they're about having a mental map. 🗄 Databases, 🌐 networks, ⏪ rollbacks, ✈️ migrations, ☁ third parties, 🔑 certs, ⚙️ configs. If you start with these in mind, you reduce flailing, frame the investigation, and buy time for the team to dig deeper.
 
 #### 🧠⏱️ Decision Making Under Pressure: The OODA Loop (and Its Failure Modes)
 
@@ -1348,7 +1337,7 @@ Make the move, then loop again. Recovery is built on fast iteration, not heroics
 - **Endless SEV 🕐**, Nobody feels safe to declare 'all clear,' so the incident drags on.  
 - **Stale Playbooks 📖**, Responders waste time because docs do not match reality.  
 
->🔑 Key Takeaway: The OODA Loop works when it runs clean. The moment it stalls, look for these failure modes and fallacies, they are the fingerprints of an incident response going sideways. Call them out, reset the loop, and keep momentum.  
+>🔑 **Key Takeaway:** The OODA Loop works when it runs clean. The moment it stalls, look for these failure modes and fallacies, they are the fingerprints of an incident response going sideways. Call them out, reset the loop, and keep momentum.  
 
 #### 🧭 Seek Clarity Early
 
@@ -1413,11 +1402,10 @@ They treat:
 - 🎯 Confidence as **temporary**  
 - 🔄 Clarity as something you **build, check, and re-check**  
 
-> 🔑 **Key Takeaway:**  
-> Strong incident command isn't about heroics—it's about **structure**, **clear roles**, and **iterative clarity**.  
+> 🔑 **Key Takeaway:** Strong incident command isn't about heroics, it's about **structure**, **clear roles**, and **iterative clarity**.  
 > In the fog, **clarity > certainty**.  
 > But clarity without **humility** becomes overconfidence.  
-> 🧠 **Question everything—especially yourself.**
+> 🧠 **Question everything, especially yourself.**
 
 ### 9. Communication Under Pressure 🗣️
 
@@ -1531,7 +1519,7 @@ Everything else is an artifact of that ticket.
 - 🌍 Scales globally — anyone, anywhere can align on the same record  
 
 > 🔑 **Key Takeaway:** One team acronym. One user GUID. One incident ID.  
-> The **ticket is the root** — everything else is an artifact.  
+> The **ticket is the source of truth** — everything else is an artifact.  
 
 ##### Make It Real in Repos 🗃️🧑‍💻  
 
@@ -1559,8 +1547,6 @@ Repos, branches, PRs, and runbooks reflect the same acronyms, user GUIDs, and in
   - Labels: `incident/INC-1234`, `team/API`, `owner/jtsimmons`  
 
 > 🔑 **Key Takeaway:** Repos aren't paperwork. They're part of the cockpit. Every artifact shows the same `service`, `team`, `user`, and `incident`.  
-
----
 
 ##### Quick Start Checklist ✅  
 
@@ -1712,8 +1698,7 @@ But if a decision is made on Zoom, someone *must* write it into Slack.
 - Don't wait for answers—say what you know and what you're doing next
 - Coordinate closely with support, marketing, and comms
 
-> 🔑 **Key Takeaway:**  
-> Clarity under pressure isn't optional. It's the product of culture, structure, and repetition. Use Slack as your cockpit, use language precisely, and give everyone the same map. The only good chaos is the kind you're driving.
+> 🔑 **Key Takeaway:** Clarity under pressure isn't optional. It's the product of culture, structure, and repetition. Use Slack as your cockpit, use language precisely, and give everyone the same map. The only good chaos is the kind you're driving.
 
 ### 10. Managing People, Pace & Burnout 🧘
 
@@ -1765,8 +1750,7 @@ This isn't just operationally efficient—it's biologically smart. Humans are no
 
 If your team spans multiple continents but you're still running incidents out of a single timezone, you're paying for 24/7—but operating like 9-to-5.
 
-> 🔑 **Key Takeaway:**  
-> Follow-the-sun coverage isn't just about scale—it's about respecting the limits of human cognition. Minimize task switching, protect sleep, and align your processes to human performance windows.
+> 🔑 **Key Takeaway:** Follow-the-sun coverage isn't just about scale. It's about having your engineers at peak cognition. Minimize task switching, protect sleep, and align your processes to human performance windows.
 
 ## PART III: After the Incident 📝
 
@@ -1811,8 +1795,7 @@ Recovery means bringing systems back to their *pre-incident* state, and often be
 
 A clear, unambiguous 'all clear' signal helps shift the team's focus from crisis to recovery and learning. This could be a message in the incident channel:
 
-> 🔑 **Key Takeaway:**
-> A clear and deliberate closure process ensures true resolution, prevents 'phantom incidents,' and smoothly transitions the team to the critical learning phase.
+> 🔑 **Key Takeaway:** A clear and deliberate closure process ensures true resolution, prevents 'phantom incidents,' and smoothly transitions the team to the critical learning phase.
 
 ### 12. Postmortems That Don't Suck ✨
 
@@ -1849,8 +1832,7 @@ A robust post-mortem document typically includes:
 * **Focus on Discussion:** Encourage open dialogue, not just reading the document.
 * **Action-Oriented:** Ensure clear, assignable action items are generated.
 
-> 🔑 **Key Takeaway:**
-> A blameless postmortem is a gift to your organization. It transforms errors into opportunities for systemic improvement, fostering a culture of continuous learning and resilience.
+> 🔑 **Key Takeaway:** A blameless postmortem is a gift to your organization. It transforms errors into opportunities for systemic improvement, fostering a culture of continuous learning and resilience.
 
 #### Positive Retrospectives: When Nothing Broke (Because You Did It Right) ✨
 
@@ -1874,8 +1856,7 @@ You're not chasing a root cause here—you're mapping the early warning system a
 
 If you want real resilience, you can't just study failures. You have to study the things that *almost* failed but didn't. They show you where your systems flexed instead of snapped, and where your people trusted their gut and were right.
 
-> 🔑 **Key Takeaway:**  
-> Celebrate the anti-incidents. They're often invisible, but they're proof your systems—and your people—are getting stronger.
+> 🔑 **Key Takeaway:** Celebrate the anti-incidents. They're often invisible, but they're proof your systems and your people are getting stronger.
 
 #### 📡 Meta Retrospectives: Calibrating the Review Process
 
@@ -1915,8 +1896,7 @@ This is where teams build *process literacy*. You're not asking 'What went wrong
   - Themes from retro-of-retros
 - Don't weaponize this. It's a learning loop, not a performance review.
 
-> 🔑 **Key Takeaway:**  
-> If you never inspect your own learning process, it will quietly decay. Meta retros build resilience in how you reflect, not just how you respond.
+> 🔑 **Key Takeaway:** If you never inspect your own learning process, it will quietly decay. Meta retros build resilience in how you reflect, not just how you respond.
 
 ### 13. From Lessons to Systems Change 🔄
 
@@ -1954,8 +1934,7 @@ This is often the hardest part. Reliability work (from post-mortems) competes wi
 * **Cultural Reinforcement:** Regularly highlight success stories of post-mortem actions.
 * **Shared Responsibility:** Emphasize that reliability is everyone's job, not just the SRE team's. 🤝
 
-> 🔑 **Key Takeaway:**
-> The true measure of an effective incident management program is its ability to drive concrete, systemic change. Turn lessons learned into prioritized, actionable work that continuously improves reliability.
+> 🔑 **Key Takeaway:** The true measure of an effective incident management program is its ability to drive concrete, systemic change. Turn lessons learned into prioritized, actionable work that continuously improves reliability.
 
 ### 14. Measuring What Matters 📊
 
@@ -1996,8 +1975,7 @@ Measuring is part of a continuous loop:
 5.  **Implement Changes:** Prioritize and execute action items.
 6.  **Measure Again:** Did the changes have the desired effect?
 
-> 🔑 **Key Takeaway:**
-> Strategic metrics provide the evidence needed to understand your current state, justify investment in reliability, and demonstrate the impact of your incident management program. Choose metrics that drive actionable insights, not just numbers.
+> 🔑 **Key Takeaway:** Strategic metrics provide the evidence needed to understand your current state, justify investment in reliability, and demonstrate the impact of your incident management program. Choose metrics that drive actionable insights, not just numbers.
 
 ### 15. The Future State of Incident Command 🔮
 
