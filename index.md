@@ -1476,97 +1476,100 @@ Standardized terminology should appear everywhere:
 - 📈 Dashboards  
 - 🧾 Runbooks  
 - 💬 Slack channels  
-- 🎥 Video call agendas  
+- 🎥 Zoom call titles & agendas  
 
-Pick a canonical term, 'Probes,' not 'Canaries', and use it across the board. One word, one meaning.
+Pick canonical terms, not nicknames. One word, one meaning. One name, everywhere.  
 
-##### Standardizing Acronyms & IDs Across the Stack 🔠🆔
+##### Standardizing Teams & IDs 🔠🆔
 
-When the heat is on, inconsistency kills clarity. Teams, tools, and telemetry should all speak the same language.  
+When the heat is on, inconsistency kills clarity. Teams, users, and incidents should all speak the same language.  
 
-##### Team Acronyms: One Name, Everywhere  
+###### Team Acronyms: One Name, Everywhere  
 - ✅ Pick a canonical short name per team (`API`, `DBA`, `EDGE`)  
-- 💬 Use the same acronym in Slack, Zoom, dashboards, runbooks, repos, on-call schedulers  
-- 🚫 Avoid pet names or codewords (“Bluebird”, “MARS”)—they burn cycles on translation  
+- 💬 Use the same acronym in Slack channels, Zoom display names, runbooks, dashboards, repos, on-call schedulers  
+- 🚫 Ban pet names or codewords (“Bluebird”, “MARS”)—they slow response  
 
-##### Global GUIDs: One Key, Many Doors  
+###### User GUIDs: Legible & Unique  
+- 🧑‍💻 Every responder gets a unique **8-char lowercase ID** = first letter + middle initial + last name  
+  - `jtsimmons` → John T. Simmons  
+  - `mlroberts` → Maria L. Roberts  
+- 🎥 Zoom: display name = `jtsimmons – John T. Simmons (API)`  
+- 💬 Slack: alias/profile = `mlroberts – Maria L. Roberts (DBA)`  
+- 📂 These IDs appear in Slack, Zoom, tickets, repos — creating a clean audit trail across tools  
+
+###### Incident GUIDs: One Key, Many Doors  
 - 🆔 Every incident gets a unique ID (`INC-1234`)  
-- 🔗 That ID appears in: Slack channel, Zoom bridge, JIRA ticket, Confluence page, Datadog notebook  
-- 📦 Same for services (`SVC-CHECKOUT`, `SVC-PAYMENTS`)—one label across alerts, dashboards, and docs  
-- 🤖 Tooling can automate this: `/incident sev1` → spins up channel, bridge, ticket, doc—all stamped with the same ID  
+- 🔗 That ID appears in Slack channel, Zoom bridge, JIRA ticket, Confluence page, repo branches  
+- 📦 Same for services (`SVC-CHECKOUT`, `SVC-PAYMENTS`)—used across docs and tickets  
+- 🤖 Tooling automates this: `/incident sev1` → spins up ticket, channel, bridge, doc — all stamped with `INC-1234`  
+
+##### 🎯 Source of Truth: The Ticket  
+
+Every incident has one **canonical record** — the ticket (e.g., JIRA `INC-1234`).  
+Everything else is an artifact of that ticket.  
+
+- **Ticket as Root** 🌱  
+  - JIRA (or your incident system of record) holds the authoritative ID and metadata  
+  - Severity, owners, start/end timestamps, and status live here  
+  - No parallel sources of truth  
+
+- **Artifacts as Children** 🧩  
+  - Slack: channel `#inc-1234` → links back to ticket  
+  - Zoom: call `INC-1234 – Checkout Outage` → links back to ticket  
+  - Repo: branch `hotfix/INC-1234-rollback` → links back to ticket  
+  - Notebook/Doc: `INC-1234 – 5xx Spike` → links back to ticket  
+  - Status Page / External Updates: reference `INC-1234`  
+
+- **Automation** 🤖  
+  - `/incident sev1` → opens the ticket, spawns Slack + Zoom, drops all links  
+  - Searching `INC-1234` pulls the entire trail across systems  
 
 **Why It Matters**  
-- 🧭 Removes translation tax under stress (“Is `checkout-api` = `CartSvc`?”)  
-- 📂 Every artifact (logs, tickets, updates) is linkable via one key  
-- 🌍 Works across orgs & time zones—SRE, Security, Product all aligned  
-- 📝 Postmortems are cleaner: one ID = one story thread  
+- 🧭 Single source of truth — no ambiguity about what's “official”  
+- 👥 Eliminates confusion — responders and execs all land on the ticket first  
+- 📂 Easier retros — every artifact rolls up to the same ID  
+- 🌍 Scales globally — anyone, anywhere can align on the same record  
 
-> 🔑 **Key Takeaway:** Pick one name. Pick one ID. Use it everywhere. Consistency is speed.  
-
-##### Make It Real in Observability 🛰️📊  
-
-Your IDs and acronyms should live inside metrics, logs, traces, dashboards, and notebooks. If it’s visible during a SEV, it carries the same names.  
-
-- **Metrics & Labels** 🧩  
-  - Standard fields: `service.name`, `team`, `env`, `region`, `incident.id`  
-  - Example: `svc.checkout.api.p95_latency{env="prod",team="API",incident.id="INC-4321"}`  
-
-- **Logs** 🪵  
-  - Required fields: `service`, `team`, `trace_id`, `incident_id`  
-  - Saved queries: `service=SVC-CHECKOUT incident_id=INC-4321`  
-
-- **Traces (OTel)** 🧭  
-  - Resource attrs: `service.name=SVC-CHECKOUT`, `team=API`  
-  - Span attrs: `incident.id=INC-4321`  
-
-- **Dashboards & Notebooks** 🖼  
-  - Title: `[SVC-CHECKOUT] Prod – API Latency`  
-  - Notebook: `INC-4321 – Checkout 5xx Spike`  
-  - First panel = links: Slack channel, ticket, runbook, Zoom  
-
-- **Alerts** 🚨  
-  - Title: `SEV-1 SVC-CHECKOUT 5xx Spike (INC-4321)`  
-  - Payload includes CAN snapshot + direct runbook links  
-
-> 🔑 **Key Takeaway:** If it shows up in a graph, a log, or a trace, it carries the same `service.name` and the same `incident.id`. One name. One key. Everywhere.  
-
+> 🔑 **Key Takeaway:** One team acronym. One user GUID. One incident ID.  
+> The **ticket is the root** — everything else is an artifact.  
 
 ##### Make It Real in Repos 🗃️🧑‍💻  
 
-Repos, branches, PRs, and runbooks should also reflect the same acronyms and IDs.  
+Repos, branches, PRs, and runbooks reflect the same acronyms, user GUIDs, and incident IDs.  
 
 - **Repo & Directory Conventions** 📦  
-  - Repo names: `svc-checkout`, `svc-payments`  
-  - Runbooks live beside code: `services/checkout/runbook.md`  
-  - Service manifest: `service.yaml` with `service: SVC-CHECKOUT`, `team: API`  
-
-- **Branch, Commit, PR Hygiene** 🌿  
-  - Branch: `hotfix/INC-4321-rollback-checkout-2.17.3`  
-  - Commit: `[INC-4321] rollback to 2.17.3`  
-  - PR: `[INC-4321] Checkout rollback` with labels `team/API`, `service/SVC-CHECKOUT`  
-
-- **Ownership & Review** 🧭  
-  - `CODEOWNERS`: `/services/checkout/ @team-API`  
-  - PR labels: `incident/INC-4321`, `team/API`  
-
-- **Runbooks as Code** 📖  
-  - Front-matter in `runbook.md`:  
+  - Repo: `svc-checkout`  
+  - Runbook: `services/checkout/runbook.md`  
+  - Manifest:  
     ```yaml
     service: SVC-CHECKOUT
     team: API
+    owner: jtsimmons
     tier: 1
     last_reviewed: 2025-08-01
     ```  
 
-> 🔑 **Key Takeaway:** Repos aren’t paperwork. They’re part of the cockpit. If a human touches it during a SEV, it shows the same `service` and the same `incident`.  
+- **Branch, Commit, PR Hygiene** 🌿  
+  - Branch: `hotfix/INC-1234-rollback-checkout-2.17.3`  
+  - Commit: `[INC-1234] rollback by mlroberts`  
+  - PR: `[INC-1234] Checkout rollback` with labels `team/API`, `service/SVC-CHECKOUT`, `owner/mlroberts`  
 
-##### Quick Starter Checklist ✅  
+- **Ownership & Review** 🧭  
+  - `CODEOWNERS`: `/services/checkout/ @team-API`  
+  - Labels: `incident/INC-1234`, `team/API`, `owner/jtsimmons`  
+
+> 🔑 **Key Takeaway:** Repos aren't paperwork. They're part of the cockpit. Every artifact shows the same `service`, `team`, `user`, and `incident`.  
+
+---
+
+##### Quick Start Checklist ✅  
 
 - 🔠 Canonical team acronyms (`API`, `DBA`, `EDGE`)  
-- 🆔 Enforce `incident.id` everywhere (Slack, Zoom, tickets, dashboards, repos)  
-- 🧭 Set `service.name` consistently across telemetry and docs  
+- 🧑‍💻 User GUIDs = lowercase 8-char `First + Middle + Last` (e.g., `jtsimmons`, `mlroberts`) — enforced in Slack & Zoom  
+- 🆔 Incident ticket is the source of truth (`INC-####`)  
+- 🧭 All artifacts (channels, calls, repos, docs) reference the ticket ID  
 - 🧪 CI/linters block drift  
-- 🤖 `/incident` workflow auto-stamps all artifacts with the same GUID  
+- 🤖 `/incident` workflow auto-stamps everything with team, user, and incident IDs  
 
 ##### 🧩 From ITIL to ICAO: Standard Language as Operational Lifeline
 
