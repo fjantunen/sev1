@@ -1,0 +1,6 @@
+{
+  "name": "Lumina Reader",
+  "description": "A high-fidelity incident command e-reader app with human-like speech synthesis, real-time scroll synchronizing highlight, and an inline Markdown content configuration panel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

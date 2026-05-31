@@ -1,0 +1,59 @@
+## How to Deploy to GitHub Pages (gh-pages)
+
+1. **Ensure you have a `gh-pages` branch**
+   - If you haven't created it yet, run:
+     ```bash
+     git checkout --orphan gh-pages
+     git reset --hard
+     git commit --allow-empty -m "Initial gh-pages commit"
+     git push origin gh-pages
+     ```
+   - Switch back to your main branch:
+     ```bash
+     git checkout main
+     ```
+
+2. **Build the project for production**
+   - Run the Vite build command:
+     ```bash
+     npm run build
+     ```
+   - This generates a `dist/` folder containing the static site.
+
+3. **Deploy the `dist/` folder to `gh-pages`**
+   - Use the `gh-pages` npm script added to `package.json`:
+     ```bash
+     npm run deploy
+     ```
+   - The script publishes the contents of `dist/` to the `gh-pages` branch.
+
+4. **Add `howto.txt` to the root of the repo**
+   - Create the file in the repository root (same level as `package.json`).
+   - The file will automatically be part of the next commit.
+   - Example command:
+     ```bash
+     cat << 'EOF' > howto.txt
+     ## Deployment Instructions for GitHub Pages
+
+     (Copy the steps from this file into your documentation or keep it here for reference.)
+     EOF
+     ```
+
+5. **Commit and push the `howto.txt` file**
+   ```bash
+   git add howto.txt
+   git commit -m "Add deployment instructions (howto.txt)"
+   git push origin main
+   ```
+
+6. **Verify the file is available on GitHub Pages**
+   - After the deploy finishes, navigate to `https://<your-username>.github.io/<repo-name>/howto.txt`.
+   - The file should be served from the root of the site.
+
+### Quick Recap
+- Build with `npm run build`
+- Deploy with `npm run deploy`
+- Add/commit `howto.txt` to the repo root
+- Push changes and verify on the live site.
+
+Feel free to customize the contents of `howto.txt` as needed.
